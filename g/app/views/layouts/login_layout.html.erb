@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>4GCelulares</title>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
+    </head>
+    <body>
+       
+        <div class="error_page">
+            <!--/login-top-->
+            <div class="error-top">
+                <h2 class="inner-tittle page">4GCelulares</h2>
+                <div class="login">
+                    <h3 class="inner-tittle t-inner">Iniciar sesion</h3>
+                    
+                    <% if notice %>
+                    <%= bootstrap_flash %> 
+                    <% end %>
+                    <% if alert %>
+                    <%= bootstrap_flash %> 
+                    <% end %>
+                    <%= yield %>
+                </div>
+            </div>
+            <!--//login-top-->
+        </div>
+        <!--//login-->
+        <!--footer section start-->
+        <div class="footer">
+            <div class="error-btn">
+                <a class="read fourth" href="index.html">Return to Home</a>
+            </div>
+            <p>&copy 2016 4GCelulares . All Rights Reserved</p>
+        </div>
+    </body>
+</html>

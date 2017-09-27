@@ -9,7 +9,21 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#gem 'sqlite3'
+
+gem 'mysql2', '0.3.21'
+
+gem 'devise'
+
+gem 'execjs'
+gem 'rdoc', '~> 4.2'
+
+#gem 'therubyracer'
+gem 'coffee-script-source', '1.8.0'
+gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
+
+#gem "bcrypt-ruby", '~> 3.0.0'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets

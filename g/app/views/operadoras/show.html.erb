@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pais:</strong>
+  <%= @operadora.pais_id %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @operadora.nombre %>
+</p>
+
+<p>
+  <strong>Costo:</strong>
+  <%= @operadora.costo %>
+</p>
+
+<%= link_to 'Edit', edit_operadora_path(@operadora) %> |
+<%= link_to 'Back', operadoras_path %>

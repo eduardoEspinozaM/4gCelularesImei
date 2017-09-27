@@ -1,0 +1,43 @@
+
+<div class="intro intro4 overlay gradient4">
+        <div class="container">
+            <div class="row center-flex">
+                <div class="col-md-6">
+
+                    <h2>Desbloquea tu Celular con <b>4GCelulares</b> </h2>
+                    <p>Solicitar el código de desbloqueo para tu <%= @telefono.modelo.marca.nombre %> <%= @telefono.modelo.nombre %></p>
+                    
+                    <a href="#" class="btn btn-primary btn-lg">Get Started <i class="cu cu-arrow-right2"></i></a>
+                </div>
+
+                <div class="col-md-5 col-md-push-1">
+                    <%= form_with(model: @pedido, url: '/pedidos/create', local: true, method: :post, class: 'intro-form') do |form| %>
+                        <h4>Elige el operador actual del teléfono</h4>
+                        
+                        <% operadora_array = Operadora::all.map { |operadora| ["Operadora: #{operadora.nombre} | Costo: #{operadora.costo}", operadora.id ] }  %>
+                        <%= form.select(:operadora_id, options_for_select(operadora_array), {prompt: true})  %>
+                        <br>    
+
+                        <h4>Datos del Teléfono y Contacto</h4>
+                        <%= form.number_field :telefono_id, id: :pedido_telefono_id, placeholder: 'Telefono', class: 'hidden' %>
+
+                        <%= form.number_field :imei, id: :pedido_imei, placeholder: 'IMEI' %>
+
+                        <%= form.text_field :email, id: :pedido_email, placeholder: 'Email' %>
+
+                        <%= form.text_field :nro_telefono, id: :pedido_nro_telefono, placeholder: 'Numero de contacto' %>
+
+                        <%= form.collection_select(:formapago_id, FormaPago::all, :id, :nombre, {prompt: true}, {class: '' ,placeholder: 'Seleccione una forma de pago'}) %>
+
+                        <%= form.submit 'Solicitar desbloqueo', class: 'btn btn-primary btn-lg btn-block text-center' %>
+                        <span>Rellena los datos del pedido y recibirás un correo con el código de desbloqueo y unas sencillas instrucciones detalladas para desbloquear tu <%= @telefono.modelo.marca.nombre %> <%= @telefono.modelo.nombre %> en tiempo récord.   </span>
+                    <% end %>
+                    <div id="response"></div>                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+

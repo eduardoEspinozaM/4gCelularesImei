@@ -1,0 +1,31 @@
+
+<div class="intro intro4 overlay gradient4">
+        <div class="container">
+            <div class="row center-flex">
+                <div class="col-md12">
+                  <p id="notice"><%= notice %></p>
+
+                    <h2>Desbloquea tu Celular con <b>4GCelulares</b> </h2>
+                    <p>Detalle de pedido | Desbloqueo </p>
+
+
+                    <div class="alert alert-info">
+                        <h3>Operadora: <%= @pedido.operadora.nombre %></h3>
+                        <h3>Telefono: <%= @pedido.telefono.modelo.marca.nombre %> <%= @pedido.telefono.modelo.nombre %> </h3>
+                        <h3>Tipo: <%= @pedido.telefono.tipo.nombre %></h3>
+                        <h3>IMEI: <%= @pedido.imei %></h3>
+                        <h3>Email: <%= @pedido.email %></h3>
+                        <h3>N° Telefono: <%= @pedido.nro_telefono %></h3>
+                        <h3>Total: <%= @pedido.total %></h3>
+                        <h3>Operadora: <%= @pedido.operadora.nombre %></h3>
+                        </h1>
+                    </div>
+                    
+                    <a href="http://localhost:3000" class="btn btn-primary btn-lg">Ir a inicio <i class="cu cu-arrow-right2"></i></a>
+                    
+
+                </div>
+
+            </div>
+        </div>
+    </div>

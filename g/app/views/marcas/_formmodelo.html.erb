@@ -1,0 +1,37 @@
+
+<div class="intro intro4 overlay gradient4">
+        <div class="container">
+            <div class="row center-flex">
+                <div class="col-md-6">
+
+                    <h2>Desbloquea tu Celular con <b>4GCelulares</b> </h2>
+                    <p>Selecciona el modelo del celular que quieres liberar</p>
+
+                    <div class="alert alert-info">
+                        <h1>
+                             Marca seleccionada: <%= @marca.nombre %>
+                        </h1>
+                    </div>
+                    
+                    <a href="#" class="btn btn-primary btn-lg">Get Started <i class="cu cu-arrow-right2"></i></a>
+                </div>
+
+                <div class="col-md-5 col-md-push-1">
+                    <%= form_with(url: '/telefonos/busqueda', local: true, method: :get, class: 'intro-form') do |form| %>
+                        
+                        <h4>Selecciona el modelo del celular que quieres liberar</h4>
+                        <h5>Marca seleccionada: <b><%= @marca.nombre %></b></h5>
+
+                        <%= form.collection_select(:modelo_id, Modelo::where(:marca_id => @marca.id), :id, :nombre, {prompt: true}, {class: '' ,placeholder: 'Busca aquí el modelo del celular'}) %>
+
+                        <%= form.submit 'Seleccionar', class: 'btn btn-primary btn-lg btn-block text-center' %>
+                    <% end %>
+                    <div id="response"></div>                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+

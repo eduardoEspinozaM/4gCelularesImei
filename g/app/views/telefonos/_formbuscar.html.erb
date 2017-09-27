@@ -1,0 +1,38 @@
+
+<div class="intro intro4 overlay gradient4">
+        <div class="container">
+            <div class="row center-flex">
+                <div class="col-md-6">
+
+                    <h2>Desbloquea tu Celular con <b>4GCelulares</b> </h2>
+                    <p>Selecciona el telefono que quieres liberar</p>
+
+
+                    <div class="alert alert-info">
+                        <h3>Marca: <%= @modelo.marca.nombre %></h3>
+                        <h3>Modelo: <%= @modelo.nombre %></h3>
+                        </h1>
+                    </div>
+                    
+                    <a href="#" class="btn btn-primary btn-lg">Get Started <i class="cu cu-arrow-right2"></i></a>
+                </div>
+
+                <div class="col-md-5 col-md-push-1">
+                    <%= form_with(url: '/pedidos/crear', local: true, method: :get, class: 'intro-form') do |form| %>
+                    
+                        <h4>Selecciona el telefono que quieres liberar</h4>
+
+                        <% telefonos_array = @telefonos.all.map { |telefono| ["#{telefono.modelo.marca.nombre} #{telefono.modelo.nombre}", telefono.id ] }  %>
+                        <%= form.select(:telefono_id, options_for_select(telefonos_array), {prompt: true})  %>
+
+                        <%= form.submit 'Seleccionar', class: 'btn btn-primary btn-lg btn-block text-center' %>
+                    <% end %>
+                    <div id="response"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+

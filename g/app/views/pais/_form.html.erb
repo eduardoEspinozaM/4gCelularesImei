@@ -1,0 +1,22 @@
+<%= form_with(model: pai, local: true) do |form| %>
+  <% if pai.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pai.errors.count, "error") %> prohibited this pai from being saved:</h2>
+
+      <ul>
+      <% pai.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, id: :pai_nombre %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  operadora_id: 1
+  telefono_id: 1
+  imei: 1
+  email: MyString
+  nro_telefono: MyString
+  total: 9.99
+  estado_pago: false
+
+two:
+  operadora_id: 1
+  telefono_id: 1
+  imei: 1
+  email: MyString
+  nro_telefono: MyString
+  total: 9.99
+  estado_pago: false

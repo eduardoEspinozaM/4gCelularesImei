@@ -1,14 +1,528 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>G</title>
+    <title>4GCelulares</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+<body>
 
-  <body>
-    <%= yield %>
-  </body>
+<!-- CODE WRAP -->
+<div class="outer-wrapper" id="top">
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" data-spy="affix" data-offset-top="100">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                
+                <!-- LOGO -->
+                <a class="navbar-brand" href=""><i class="cu cu-magic-wand"></i> 4GCelulares</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="http://localhost:3000" class="dropdown-toggle" data-toggle="dropdown">Inicio <i class="fa fa-angle-down"></i></a>
+                        <!-- <ul class="dropdown-menu">
+                            <li><a href="./index.html">Home - Concept 1</a></li>
+                        </ul> -->
+                    </li>
+                    <!-- <li><a class="page-scroll" href="#services">Services</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- NAVIGATION END -->
+
+    <!-- HERO -->
+    
+    <%= yield%>
+    <!-- HERO END -->
+    
+    <!-- SERVICE -->
+    <!-- <div class="services" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="section-heading text-center col-sm-8 col-sm-offset-2">
+                    <h2>Make your <b>Marketing website</b> an<br> awesome one with mack</h2>
+                </div>
+                <div class="col-sm-3 service-item text-center">
+                    <span class="cu cu-laptop-phone"></span>
+                    <h3>Mobile Friendly</h3>
+                    <p>Lorem ipsum dolor sit amet elit odio eget quam cursus congue felis nec suscipit diam.</p>
+                </div>
+                <div class="col-sm-3 service-item text-center">
+                    <span class="cu cu-diamond"></span>
+                    <h3>Multiple Layouts</h3>
+                    <p>Lorem ipsum dolor sit amet elit odio eget quam cursus congue felis nec suscipit diam.</p>
+                </div>
+                <div class="col-sm-3 service-item text-center">
+                    <span class="cu cu-package"></span>
+                    <h3>Easy Install</h3>
+                    <p>Lorem ipsum dolor sit amet elit odio eget quam cursus congue felis nec suscipit diam.</p>
+                </div>
+                <div class="col-sm-3 service-item text-center">
+                    <span class="cu cu-book"></span>
+                    <h3>Well documented</h3>
+                    <p>Lorem ipsum dolor sit amet elit odio eget quam cursus congue felis nec suscipit diam.</p>
+                </div>
+            </div>
+            <div class="btn-more">
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </div> -->
+    <!-- SERVICE END -->
+    
+    <!-- INFO -->
+    <!-- <div class="info-content">
+        <div class="container">
+            <div class="row center-flex">
+                <div class="col-md-6 col-md-push-6">
+                    <h2>Buy, <b>Build</b> and Launch</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus condimentum quam, eu euismod nunc dignissim nec. Maecenas egestas maximus arcu, id consectetur augue commodo cursus.</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list">
+                                <li><i class="cu cu-check"></i> Nam eu nibh leo ullamcorper</li>
+                                <li><i class="cu cu-check"></i> porta gravida feugiat orci</li>
+                                <li><i class="cu cu-check"></i> lacinia eget lectus mattis</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list">
+                                <li><i class="cu cu-check"></i> Nam eu nibh leo ullamcorper</li>
+                                <li><i class="cu cu-check"></i> porta gravida feugiat orci</li>
+                                <li><i class="cu cu-check"></i> lacinia eget lectus mattis</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-md-pull-6">
+                    <%= image_tag('/2.png', class: 'img-responsive', alt: '') %>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- INFO END -->
+    
+    <!-- INFO -->
+    <!-- <div class="info-content-dark overlay jarallax" id="info">
+        <div class="container">
+            <div class="row center-flex">
+                <div class="col-md-5">
+                    <div class="service-item2">
+                        <i class="cu cu-layout"></i>                    
+                        <div class="service-inner">
+                            <h4 class="text-uppercase"> 10 Intro <b>Concepts</b></h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit dignissim nec. Maecenas egestas maximus arcu, id consectetur augue commodo cursus.</p>
+                        </div>
+                    </div>
+                    <div class="gap120"></div>
+                    <div class="service-item2">
+                        <i class="cu cu-code"></i>                  
+                        <div class="service-inner">
+                            <h4 class="text-uppercase"> Simple and <b>Clear Coding</b></h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit dignissim nec. Maecenas egestas maximus arcu, id consectetur augue commodo cursus.</p>
+                        </div>
+                    </div>
+                    <div class="gap120"></div>
+                    <div class="service-item2">
+                        <i class="cu cu-help"></i>                  
+                        <div class="service-inner">
+                            <h4 class="text-uppercase"> 24x7 <b>Support</b></h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit dignissim nec. Maecenas egestas maximus arcu, id consectetur augue commodo cursus.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <img src="" class="img-responsive col-md-11" alt=""/>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- INFO END -->
+    
+    <!-- INFO -->
+    <!-- <div class="info-content info-content2">
+        <div class="container">
+            <div class="row center-flex">
+                <div class="col-md-6 col-md-push-6">
+                    <h2>Connect & <b>Explore.</b></h2>
+                    <p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id porta augue, non laoreet nibh.</b></p>
+                    <p>Lorem ipsum dolor sit amet elit. Sed a augue diam vel velit sollicitudin interdum nisi nec eros eu nibh porttitor maximus sodales turpis cras libero augue, tincidunt et nisi eget, convallis lacinia est.</p>
+                    <br>
+                    <a href="#" class="btn btn-primary btn-lg">Learn More</a>
+                </div>
+                <div class="col-md-6 col-md-pull-6">
+                    <img src="" class="img-responsive" alt=""/>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- INFO END -->   
+    
+    <!-- APP FEATURES -->
+    <!-- <div class="app-features border-top border-bottom">
+        <div class="container">
+            <div class="row center-flex">
+                <div class="col-md-4">
+                    <div class="features-left">
+                        <i class="cu cu-orientation"></i>
+                        <h4>Rocket launch</h4>
+                        <p>Lorem ipsum dolor sit amet corporis omnis non totam aspernatur tempora minima unde aliquid unde.</p>
+                    </div>
+                    <div class="features-left">
+                        <i class="cu cu-pie-chart"></i>
+                        <h4>Awesome Stats</h4>
+                        <p>Lorem ipsum dolor sit amet corporis omnis non totam aspernatur tempora minima unde aliquid unde.</p>
+                    </div>
+                    <div class="features-left">
+                        <i class="cu cu-user"></i>
+                        <h4>Share to People</h4>
+                        <p>Lorem ipsum dolor sit amet corporis omnis non totam aspernatur tempora minima unde aliquid unde.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">  
+                    <img src="" class="img-responsive" alt="">
+                </div>
+                <div class="col-md-4">
+                    <div class="features-right">
+                        <i class="cu cu-database"></i>
+                        <h4>Creative Layouts</h4>
+                        <p>Lorem ipsum dolor sit amet corporis omnis non totam aspernatur tempora minima unde aliquid unde.</p>
+                    </div>
+                    <div class="features-right">
+                        <i class="cu cu-thumbs-up"></i>
+                        <h4>High Security</h4>
+                        <p>Lorem ipsum dolor sit amet corporis omnis non totam aspernatur tempora minima unde aliquid unde.</p>
+                    </div>
+                    <div class="features-right">
+                        <i class="cu cu-diamond2"></i>
+                        <h4>Diamond Finish</h4>
+                        <p>Lorem ipsum dolor sit amet corporis omnis non totam aspernatur tempora minima unde aliquid unde.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- APP FEATURES END -->
+    
+    <!-- FEATURES -->
+    <!-- <div class="features" id="features">
+        <div class="container">
+            <div class="section-heading text-center col-sm-8 col-sm-offset-2">
+                <h2>Make your <b>website</b> an awesome</h2>
+                <p>Mauris ac lorem tempor, ornare lorem vel, dictum nibh. Quisque sed eros eu nibh porttitor maximus. Quisque sollicitudin velit risus, vitae sollicitudin est lacinia</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 text-center">
+                    <div class="feature-item">
+                        <img src="img/1.jpg" class="img-responsive" alt=""/>
+                        <div class="feature-item__inner">
+                            <h3>Multipurpose Use</h3>
+                            <p>Lorem ipsum dolor sit amet elit lobortis risus laoreet eros sed dui non sollicitudin odio eget quam cursus congue.</p>
+                            <a href="#">Learn More <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <div class="feature-item">
+                        <img src="img/2.jpg" class="img-responsive" alt=""/>
+                        <div class="feature-item__inner">
+                            <h3>Simple Interface</h3>
+                            <p>Lorem ipsum dolor sit amet elit lobortis risus laoreet eros sed dui non sollicitudin odio eget quam cursus congue.</p>
+                            <a href="#">Learn More <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <div class="feature-item">
+                        <img src="img/3.jpg" class="img-responsive" alt=""/>
+                        <div class="feature-item__inner">
+                            <h3>Mobile Friendly</h3>
+                            <p>Lorem ipsum dolor sit amet elit lobortis risus laoreet eros sed dui non sollicitudin odio eget quam cursus congue.</p>
+                            <a href="#">Learn More <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- FEATURES END -->
+    
+    <!-- TEAM -->
+    <!-- <div class="team overlay jarallax" id="team">
+        <div class="container">
+            <div class="section-heading text-center col-sm-8 col-sm-offset-2">
+                <h2 class="text-white">Great team behind <b>georgeous</b> mack</h2>
+                <p class="text-white">Mauris ac lorem tempor, ornare lorem vel, dictum nibh. Quisque sed eros eu nibh porttitor maximus. Quisque sollicitudin velit risus, vitae sollicitudin est lacinia</p>
+            </div>
+            <div class="clearfix"></div>
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="team-slider">
+                        <div class="col-md-6 text-center">
+                            <div class="staff-item">
+                                <img src="img/team/1.png" class="img-responsive" alt=""/>
+                                <div class="staff-info">
+                                    <h3>Mark Doe</h3>
+                                    <cite>Founder & CEO</cite>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <div class="staff-item">
+                                <img src="img/team/2.png" class="img-responsive" alt=""/>
+                                <div class="staff-info">
+                                    <h3>David Doe</h3>
+                                    <cite>UX Designer</cite>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- TEAM END -->
+    
+    <!-- PRICING -->
+    <!-- <div class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-heading text-center col-sm-8 col-sm-offset-2">
+                <h2>Plans <b>Pricing</b></h2>
+                <p>Free 14-day Trial. No credit card required.</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 text-center">
+                    <div class="plan">
+                        <div class="plan-title">Basic</div>
+                        <div class="plan-price"><small>$</small>19 <span>/ month</span></div>
+                        <ul>
+                            <li>Free Installation</li>
+                            <li>Unlimited Mails</li>
+                            <li>24x7 Support</li>
+                            <li>Live Chat Feature</li>
+                            <li>Free AD Credits</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Try it for free</a>
+                    </div>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <div class="plan">
+                        <div class="plan-title">Enterprise</div>
+                        <div class="plan-price"><small>$</small>49 <span>/ month</span></div>
+                        <ul>
+                            <li>Free Installation</li>
+                            <li>Unlimited Mails</li>
+                            <li>24x7 Support</li>
+                            <li>Live Chat Feature</li>
+                            <li>Free AD Credits</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Choose Plan</a>
+                    </div>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <div class="plan">
+                        <div class="plan-title">Custom plan</div>
+                        <div class="plan-price"><small>$</small>7.95 <span>/ month</span></div>
+                        <ul>
+                            <li>Free Installation</li>
+                            <li>Unlimited Mails</li>
+                            <li>24x7 Support</li>
+                            <li>Live Chat Feature</li>
+                            <li>Free AD Credits</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Try it for free</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- PRICING END -->
+    
+    <!-- TESTIMONIAL -->
+    <div class="testimonial bg-primary" id="testimonial">
+        <div class="container">
+            <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                <div class="carousel-inner">
+                    <!-- QUOTE 1 -->
+                    <div class="item active">
+                        <div class="row center-flex">
+                            <div class="col-sm-3">
+                                <img class="img-circle img-responsive" src="img/quote/1.jpg" alt="">
+                            </div>
+                            <div class="col-sm-9">
+                                <i class="fa fa-quote-left"></i>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consequat, lorem ut viverra tempus, ipsum mauris iaculis quam, vitae tincidunt erat urna ac mauris. Vivamus non pharetra nibh. Etiam lacinia maximus enim ut efficitur.</p>
+                                <cite>&mdash; Jenifer Doe</cite>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- QUOTE 2 -->
+                    <div class="item">
+                        <div class="row center-flex">
+                            <div class="col-sm-3">
+                                <img class="img-circle img-responsive" src="img/quote/2.jpg" alt="">
+                            </div>
+                            <div class="col-sm-9">
+                                <i class="fa fa-quote-left"></i>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consequat, lorem ut viverra tempus, ipsum mauris iaculis quam, vitae tincidunt erat urna ac mauris. Vivamus non pharetra nibh. Etiam lacinia maximus enim ut efficitur.</p>
+                                <cite>&mdash; Jenifer Doe</cite>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- QUOTE 3 -->
+                    <div class="item">
+                        <div class="row center-flex">
+                            <div class="col-sm-3">
+                                <img class="img-circle img-responsive" src="img/quote/3.jpg" alt="">
+                            </div>
+                            <div class="col-sm-9">
+                                <i class="fa fa-quote-left"></i>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consequat, lorem ut viverra tempus, ipsum mauris iaculis quam, vitae tincidunt erat urna ac mauris. Vivamus non pharetra nibh. Etiam lacinia maximus enim ut efficitur.</p>
+                                <cite>&mdash; Jenifer Doe</cite>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+                <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- TESTIMONIAL END -->
+    
+    <!-- SERVICE FEATURES -->
+   <!--  <div class="service-features">
+        <div class="container">
+            <div class="section-heading text-center col-sm-8 col-sm-offset-2">
+                <h2>Features of <b>awesome</b> mack</h2>
+                <p>Mauris ac lorem tempor, ornare lorem vel, dictum nibh. Quisque sed eros eu nibh porttitor maximus. Quisque sollicitudin velit risus, vitae sollicitudin est lacinia</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-12 gap30">
+                    <h4><i class="fa fa-group"></i> Customer Support</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing metus elit. Lorem ipsum dolor sit amet, consectetur adipiscing metus elit.</p>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 gap30">
+                    <h4><i class="fa fa-code"></i> HTML5 / CSS3</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing metus elit. Lorem ipsum dolor sit amet, consectetur adipiscing metus elit.</p>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 gap30">
+                    <h4><i class="fa fa-bars"></i> Buttons</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing metus elit. Lorem ipsum dolor sit amet, consectetur adipiscing metus elit.</p>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 gap30">
+                    <h4><i class="fa fa-google-plus"></i> Google Fonts</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing metus elit. Lorem ipsum dolor sit amet, consectetur adipiscing metus elit.</p>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 gap30">
+                    <h4><i class="fa fa-check"></i> Icons</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing metus elit. Lorem ipsum dolor sit amet, consectetur adipiscing metus elit.</p>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 gap30">
+                    <h4><i class="fa fa-desktop"></i> Lightbox</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing metus elit. Lorem ipsum dolor sit amet, consectetur adipiscing metus elit.</p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- SERVICE FEATURES END -->
+    
+    <!-- CTA -->
+    <div class="cta">
+        <div class="container">
+            <div class="row center-flex">
+                <div class="col-sm-8">
+                    <h2 class="text-white"><b>Ready to start</b> using 4GCelulares ?</h2>
+                </div>
+                <div class="col-sm-4">
+                    <a href="#" class="btn btn-default btn-lg">Get Started <i class="cu cu-arrow-right2"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CTA END -->
+    
+    <!-- FOOTER -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+            
+                <!-- FOOTER LOGO -->
+                <div class="col-sm-4 widget">
+                    <div class="f-logo"><i class="cu cu-magic-wand"></i> 4GCelulares</div>
+                    <p>Lorem ipsum dolor sit amet adipi scing elit fusce vitae metus quis enim nec elit.</p>
+                    <div class="cinfo">
+                        <p><i class="fa fa-map-marker"></i> 123, Wallstreet, Some Country,<br>Newyork 20001</p>
+                        <p><i class="fa fa-phone"></i> +1800 1234 5678</p>
+                        <p><i class="fa fa-envelope"></i> support@website.com</p>
+                    </div>
+                </div>
+                
+                <!-- USEFUL LINKS -->
+                <div class="col-sm-3 widget">
+                    <h4>Useful Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"> Career</a></li>
+                        <li><a href="#"> Privacy Policy</a></li>
+                        <li><a href="#"> Terms & Conditions</a></li>
+                        <li><a href="#"> Client Gateway</a></li>
+                        <li><a href="#"> Ranking</a></li>
+                        <li><a href="#"> Case Studies</a></li>
+                        <li><a href="#"> Frequently Ask Questions</a></li>
+                    </ul>
+                </div>
+                
+                <!-- CONTACT FORM -->
+                <div class="col-sm-5 widget">
+                    <h4>Reach Us</h4>
+                    <form class="contact-form" id="contactForm" action="php/contact.php" method="post">
+                        <input name="senderName" id="senderName" type="text" placeholder="Full Name" required>
+                        <input name="senderEmail" id="senderEmail" type="email" placeholder="Email Address" required>
+                        <textarea name="message" id="message" placeholder="Message Here"></textarea>
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </form>
+                    <div id="sendingMessage" class="statusMessage">
+                        <p><i class="fa fa-spin fa-spinner"></i> Sending your message. Please wait...</p>
+                    </div>
+                    <div id="successMessage" class="successmessage">
+                        <p><span class="success-ico"></span> Thanks for sending your message! We'll get back to you shortly.</p>
+                    </div>
+                    <div id="failureMessage" class="errormessage">
+                        <p><span class="error-ico"></span> There was a problem sending your message. Please try again.</p>
+                    </div>
+                    <div id="incompleteMessage" class="statusMessage">
+                        <p>Please complete all the fields in the form before sending.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER END --> 
+    
+    <!-- COPYRIGHT -->
+    <div class="copyright text-center">
+        <div class="container">
+            <div class="col-md-12">
+                <p>&copy; 2017. Mack Template. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+    <!-- COPYRIGHT END -->
+</div>
+<!-- CODE WRAP END -->
+
+<a href="#top" class="back-to-top page-scroll"><i class="fa fa-angle-up"></i></a>   
+
+</body>
 </html>
