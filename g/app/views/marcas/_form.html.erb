@@ -1,4 +1,4 @@
-<%= form_with(model: marca, local: true) do |form| %>
+<%= form_with(model: marca, local: true, class: 'form-horizontal') do |form| %>
   <% if marca.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(marca.errors.count, "error") %> prohibited this marca from being saved:</h2>
@@ -11,12 +11,16 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :nombre %>
-    <%= form.text_field :nombre, id: :marca_nombre %>
+  <div class="form-group">
+    <%= form.label :nombre, class: 'control-label col-lg-2 col-md-2' %>
+    <div class="col-lg-10 col-md-10">
+      <%= form.text_field :nombre, id: :marca_nombre, class: 'form-control' %>
+    </div>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <div class="col-offset-lg-2">
+      <%= form.submit 'Guardar', class: 'btn btn-success' %>
+    </div>
   </div>
 <% end %>

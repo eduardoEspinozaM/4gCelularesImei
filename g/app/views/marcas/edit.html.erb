@@ -1,6 +1,15 @@
-<h1>Editing Marca</h1>
-
-<%= render 'form', marca: @marca %>
-
-<%= link_to 'Show', @marca %> |
-<%= link_to 'Back', marcas_path %>
+<div class="col-md-9 ms-paper-content-container">
+    <div class="ms-paper-content">
+        <h1>Editar Marca</h1>
+        <p id="notice"><%= notice %></p>
+        <section class="ms-component-section">
+            <div class="bs-example">
+            	<%= render 'form', marca: @marca %>
+            	<%= link_to 'Show', @marca %> |
+            	<%= link_to 'Back', marcas_path %>
+            </div>
+            <!-- panel-code -->
+        </section>
+    </div>
+    <!-- ms-paper-content -->
+</div>

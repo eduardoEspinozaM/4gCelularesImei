@@ -76,6 +76,8 @@ GEM
     erubi (1.6.1)
     execjs (2.7.0)
     ffi (1.9.18-x86-mingw32)
+    font-awesome-sass (4.7.0)
+      sass (>= 3.2)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     i18n (0.8.6)
@@ -86,6 +88,8 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.6)
       mime-types (>= 1.16, < 4)
+    material_icons (2.2.1)
+      railties (>= 3.2)
     method_source (0.8.2)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
@@ -193,7 +197,9 @@ DEPENDENCIES
   coffee-script-source (= 1.8.0)
   devise
   execjs
+  font-awesome-sass (~> 4.7.0)
   jbuilder (~> 2.5)
+  material_icons
   mysql2 (= 0.3.21)
   puma (~> 3.7)
   rails (~> 5.1.4)

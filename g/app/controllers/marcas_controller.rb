@@ -1,6 +1,6 @@
 class MarcasController < ApplicationController
   before_action :set_marca, only: [:show, :edit, :update, :destroy]
-
+  layout 'admin'
   # GET /marcas
   # GET /marcas.json
   def index

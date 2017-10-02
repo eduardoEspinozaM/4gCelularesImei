@@ -1,9 +1,19 @@
-<p id="notice"><%= notice %></p>
+<div class="col-md-9 ms-paper-content-container">
+    <div class="ms-paper-content">
+        <h1>Editar Marca</h1>
+        <p id="notice"><%= notice %></p>
+        <section class="ms-component-section">
+            <div class="bs-example">
+				<p>
+				  <strong>Nombre:</strong>
+				  <%= @marca.nombre %>
+				</p>
 
-<p>
-  <strong>Nombre:</strong>
-  <%= @marca.nombre %>
-</p>
-
-<%= link_to 'Edit', edit_marca_path(@marca) %> |
-<%= link_to 'Back', marcas_path %>
+				<%= link_to 'Edit', edit_marca_path(@marca) %> |
+				<%= link_to 'Back', marcas_path %>
+            </div>
+            <!-- panel-code -->
+        </section>
+    </div>
+    <!-- ms-paper-content -->
+</div>
