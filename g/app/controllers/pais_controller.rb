@@ -1,6 +1,6 @@
 class PaisController < ApplicationController
   before_action :set_pai, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /pais
   # GET /pais.json
   def index

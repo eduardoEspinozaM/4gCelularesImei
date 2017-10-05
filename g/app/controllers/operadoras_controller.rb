@@ -1,6 +1,6 @@
 class OperadorasController < ApplicationController
   before_action :set_operadora, only: [:show, :edit, :update, :destroy]
-
+#layout 'admin'
   # GET /operadoras
   # GET /operadoras.json
   def index

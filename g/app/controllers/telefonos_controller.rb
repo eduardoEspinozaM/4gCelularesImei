@@ -1,6 +1,6 @@
 class TelefonosController < ApplicationController
   before_action :set_telefono, only: [:show, :edit, :update, :destroy]
-
+ 
   # GET /telefonos
   # GET /telefonos.json
   def index

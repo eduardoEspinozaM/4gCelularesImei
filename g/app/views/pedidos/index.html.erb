@@ -1,24 +1,26 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Pedidos</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Operadora</th>
-      <th>Telefono</th>
-      <th>Imei</th>
-      <th>Email</th>
-      <th>Nro telefono</th>
-      <th>Total</th>
-      <th>Estado pago</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @pedidos.each do |pedido| %>
-      <tr>
+<div class="col-md-9 ms-paper-content-container">
+    <div class="ms-paper-content">
+        <h1>Pedidos</h1>
+        <p id="notice"><%= notice %></p>
+        <section class="ms-component-section">
+            <div class="bs-example">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Operadora</th>
+                            <th>Telefono</th>
+                               <th>Imei</th>
+                             <th>Email</th>
+                          <th>Nro telefono</th>
+                             <th>Total</th>
+                              <th>Estado pago</th>
+                            <th colspan="3"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @pedidos.each do |pedido| %>
+                        <tr> 
         <td><%= pedido.operadora_id %></td>
         <td><%= pedido.telefono_id %></td>
         <td><%= pedido.imei %></td>
@@ -30,10 +32,12 @@
         <td><%= link_to 'Edit', edit_pedido_path(pedido) %></td>
         <td><%= link_to 'Destroy', pedido, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Pedido', new_pedido_path %>
+                        <% end %>
+                    </tbody>
+                </table>
+            </div>
+            <!-- panel-code -->
+        </section>
+    </div>
+    <!-- ms-paper-content -->
+</div>
