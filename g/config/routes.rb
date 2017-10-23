@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :chequears
   resources :forma_pagos
   resources :paises
   resources :tipos

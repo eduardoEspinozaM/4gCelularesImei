@@ -1,0 +1,68 @@
+<div class="col-lg-8 col-lg-offset-2 well">
+<fieldset>
+   <div class="icon_free"><img title="Chequear celular gratis" alt="Chequear gratis tu celular" src="//d13rxepuu2fckz.cloudfront.net/img/icon_free_ds.png"></div>
+   <h2 class="text-24 text-default">Averigua el estado de tu celular en segundos. <a data-toggle="modal" data-target="#modal_example_imei_check_basic" style="margin-left:10px;"><span class="btn-ds btn-ds-primary text-14">Ver Ejemplo <i class="fa fa-search-plus"></i></span></a></h2>
+   Teclea *#06# en tu celular para conocer tu IMEI. Solo los 15 primeros dígitos sin espacios ni guiones. 
+   <div class="row row-ds" style="margin-top:15px;">
+      <form id="no_disp_form" action="#" method="post" novalidate="novalidate">
+
+         <div class="col-xs-9">
+            <input id="imei" name="imei" type="text" class="form-control input-checkimei text-16 required" placeholder="Código IMEI: ej. 011950004980028" value="">
+         </div>
+
+         <div class="col-xs-3">
+            <a href="#" class="btn btn-info btn-lg">
+          <span class="glyphicon glyphicon-search"></span>CHEQUEAR CELULAR
+        </a>
+
+         </div>
+         <div class="col-xs-12">
+            <div id="error_p" style="margin:10px 0 0 20px;"></div>
+         </div>
+         <div class="col-xs-12 check-condiciones">
+            <div class="checkbox">
+               <label>
+               <input name="email_check" id="email_check" type="checkbox" checked=""> He leído y acepto las <a id="terminos_link" data-toggle="modal" href="#" data-target="#terms">Condiciones de Uso</a> y <a id="privacidad_link" data-toggle="modal" href="#" data-target="#privacidad">Privacidad</a> </label>
+            </div>
+         </div>
+      </form>
+   </div>
+
+
+</fieldset>
+</div>
+
+
+
+
+
+
+
+
+<p id="notice"><%= notice %></p>
+
+<h1>Chequears</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Imei</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @chequears.each do |chequear| %>
+      <tr>
+        <td><%= chequear.imei %></td>
+        <td><%= link_to 'Show', chequear %></td>
+        <td><%= link_to 'Edit', edit_chequear_path(chequear) %></td>
+        <td><%= link_to 'Destroy', chequear, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Chequear', new_chequear_path %>

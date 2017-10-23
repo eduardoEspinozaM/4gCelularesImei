@@ -1,18 +1,44 @@
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-
-  <%= f.text_field :email, class: 'text', autofocus: true, placeholder: 'Email' %>
-  <%= f.password_field :password, class: '', autocomplete: "off", placeholder: 'Contraseña' %>
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-        <%= f.check_box :remember_me %>
-        <%= f.label :remember_me %>
+<div class="col-lg-6 col-lg-offset-4 well">
+<fieldset>
+   <legend>Iniciar sesión</legend>
+   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+   <div class="form-group label-floating">
+      <div class="input-group">
+         <span class="input-group-addon">
+         <i class="fa fa-account"></i>
+         </span>
+         <%= f.label :email %>
+         <%= f.email_field :email, autofocus: true, class: 'form-control', require: '' %>
+      </div>
+   </div>
+   <div class="form-group label-floating">
+      <div class="input-group">
+         <span class="input-group-addon">
+         <i class="fa fa-lock"></i>
+         </span>
+         <%= f.label :password %>
+         <%= f.password_field :password, autofocus: true, class: 'form-control', require: '' %>
+      </div>
+      <% if devise_mapping.rememberable? -%>
+      <div class="row mt-2">
+         <div class="col-md-6">
+            <div class="form-group">
+              <div class="form-group">
+      <%= f.check_box :remember_me %>
+      <%= f.label "Recordarme" %>
     </div>
-  <% end -%>
-  <div class="submit">
-      <%= f.submit "Log in" %>
-  </div>
-<% end %>
-<div class="new">
-    <%= render "usuarios/shared/links" %>
-</div>
+            </div>
+         </div>
 
+         <% end -%>
+         <div class="form-group">
+            <%= button_tag(type: 'submit', class: "btn btn-raised btn-primary pull-rightb") do %>
+            <span class="fa fa-external-link"></span> Entrar
+            <% end %>
+         </div>
+         <%= render "usuarios/shared/links" %>
+      </div>
+</fieldset>
+<% end %>
+</div>
+</form>

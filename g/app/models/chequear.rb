@@ -1,0 +1,2 @@
+class Chequear < ApplicationRecord
+end

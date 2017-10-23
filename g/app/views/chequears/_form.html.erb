@@ -1,0 +1,22 @@
+<%= form_with(model: chequear, local: true) do |form| %>
+  <% if chequear.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(chequear.errors.count, "error") %> prohibited this chequear from being saved:</h2>
+
+      <ul>
+      <% chequear.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :imei %>
+    <%= form.text_field :imei, id: :chequear_imei %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

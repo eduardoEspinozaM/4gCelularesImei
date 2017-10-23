@@ -1,307 +1,62 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>4GCelulares</title>
-   
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<html lang="en">
+  <head> 
+    <%= csrf_meta_tags %>   
+    <title>4GG</title>
+ <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   </head>
-<body>
-     <body>
- <div id="ms-preload" class="ms-preload">
-      <div id="status">
-        <div class="spinner">
-          <div class="dot1"></div>
-          <div class="dot2"></div>
-        </div>
-      </div>
-    </div>
+  <body>
+                    
 
-   <div class="sb-site-container">
-      <!-- Modal -->
-      <div class="modal modal-primary" id="ms-account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog animated zoomIn animated-3x" role="document">
-          <div class="modal-content">
-            <div class="modal-header shadow-2dp no-pb">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">
-                  <i class="fa fa-close"></i>
-                </span>
-              </button>
-              <div class="modal-title text-center">
-                <span class="ms-logo ms-logo-white ms-logo-sm mr-1">4G</span>
-                <h3 class="no-m ms-site-title">
-                  <span>CELULARES</span>
-                </h3>
-              </div>
-              <div class="modal-header-tabs">
-                <ul class="nav nav-tabs nav-tabs-full nav-tabs-3 nav-tabs-primary" role="tablist">
-                  <li role="presentation" class="active">
-                    <a href="#ms-login-tab" aria-controls="ms-login-tab" role="tab" data-toggle="tab" class="withoutripple">
-                      <i class="fa fa-account"></i>Iniciar sesión</a>
-                  </li>
-                  <li role="presentation">
-                    <a href="#ms-register-tab" aria-controls="ms-register-tab" role="tab" data-toggle="tab" class="withoutripple">
-                      <i class="fa fa-account-add"></i> Registrar</a>
-                  </li>
-                  <li role="presentation">
-                    <a href="#ms-recovery-tab" aria-controls="ms-recovery-tab" role="tab" data-toggle="tab" class="withoutripple">
-                      <i class="fa fa-key"></i> Resetear</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="modal-body">
-              <div class="tab-content">
-                <div role="tabpanel" class="tab-pane fade active in" id="ms-login-tab">
-                  <form autocomplete="off">
-                    <fieldset>
-                      <div class="form-group label-floating">
-                        <div class="input-group">
-                          <span class="input-group-addon">
-                            <i class="fa fa-account"></i>
-                          </span>
-                          <label class="control-label" for="ms-form-user">Username</label>
-                          <input type="text" id="ms-form-user" class="form-control"> </div>
-                      </div>
-                      <div class="form-group label-floating">
-                        <div class="input-group">
-                          <span class="input-group-addon">
-                            <i class="fa fa-lock"></i>
-                          </span>
-                          <label class="control-label" for="ms-form-pass">Password</label>
-                          <input type="password" id="ms-form-pass" class="form-control"> </div>
-                      </div>
-                      <div class="row mt-2">
-                        <div class="col-md-6">
-                          <div class="form-group no-mt">
-                            <div class="checkbox">
-                              <label>
-                                <input type="checkbox"> Remember Me </label>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <button class="btn btn-raised btn-primary pull-right">Login</button>
-                        </div>
-                      </div>
-                    </fieldset>
-                  </form>
-                  <div class="text-center">
-                    <h3>Login with</h3>
-                    <a href="javascript:void(0)" class="wave-effect-light btn btn-raised btn-facebook">
-                      <i class="fa fa-facebook"></i> Facebook</a>
-                    <a href="javascript:void(0)" class="wave-effect-light btn btn-raised btn-twitter">
-                      <i class="fa fa-twitter"></i> Twitter</a>
-                    <a href="javascript:void(0)" class="wave-effect-light btn btn-raised btn-google">
-                      <i class="fa fa-google"></i> Google</a>
-                  </div>
-                </div>
-                <div role="tabpanel" class="tab-pane fade" id="ms-register-tab">
-                  <form>
-                    <fieldset>
-                      <div class="form-group label-floating">
-                        <div class="input-group">
-                          <span class="input-group-addon">
-                            <i class="fa fa-account"></i>
-                          </span>
-                          <label class="control-label" for="ms-form-user">Username</label>
-
-                          <input type="text" id="ms-form-user" class="form-control"> </div>
-                      </div>
-                      <div class="form-group label-floating">
-                        <div class="input-group">
-                          <span class="input-group-addon">
-                            <i class="fa fa-email"></i>
-                          </span>
-                          <label class="control-label" for="ms-form-email">Email</label>
-                          <input type="email" id="ms-form-email" class="form-control"> </div>
-                      </div>
-                      <div class="form-group label-floating">
-                        <div class="input-group">
-                          <span class="input-group-addon">
-                            <i class="fa fa-lock"></i>
-                          </span>
-                          <label class="control-label" for="ms-form-pass">Password</label>
-                          <input type="password" id="ms-form-pass" class="form-control"> </div>
-                      </div>
-                      <div class="form-group label-floating">
-                        <div class="input-group">
-                          <span class="input-group-addon">
-                            <i class="fa fa-lock"></i>
-                          </span>
-                          <label class="control-label" for="ms-form-pass">Re-type Password</label>
-                          <input type="password" id="ms-form-pass" class="form-control"> </div>
-                      </div>
-                      <button class="btn btn-raised btn-block btn-primary">Register Now</button>
-                    </fieldset>
-                  </form>
-                </div>
-                <div role="tabpanel" class="tab-pane fade" id="ms-recovery-tab">
-                  <fieldset>
-                    <div class="form-group label-floating">
-                      <div class="input-group">
-                        <span class="input-group-addon">
-                          <i class="fa fa-account"></i>
-                        </span>
-                        <label class="control-label" for="ms-form-user">Username</label>
-                        <input type="text" id="ms-form-user" class="form-control"> </div>
-                    </div>
-                    <div class="form-group label-floating">
-                      <div class="input-group">
-                        <span class="input-group-addon">
-                          <i class="fa fa-email"></i>
-                        </span>
-                        <label class="control-label" for="ms-form-email">Email</label>
-                        <input type="email" id="ms-form-email" class="form-control"> </div>
-                    </div>
-                    <button class="btn btn-raised btn-block btn-primary">Send Password</button>
-                  </fieldset>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>
-     <header class="ms-header ms-header-primary">
+     <!-- Modal -->
+      <header class="ms-header ms-header-dark">
         <div class="container container-full">
           <div class="ms-title">
-            <a href="index.html">
+            <a href="localhost:3000">
               <!-- <img src="assets/img/demo/logo-header.png" alt=""> -->
               <span class="ms-logo animated zoomInDown animation-delay-5">4G</span>
               <h1 class="animated fadeInRight animation-delay-6">
-                <span>CELULARES</span>
+                <span>CELULRES</span>
               </h1>
             </a>
           </div>
           <div class="header-right">
-            <div class="share-menu">
-              <ul class="share-menu-list">
-                <li class="animated fadeInRight animation-delay-3">
-                  <a href="javascript:void(0)" class="btn-circle btn-google">
-                    <i class="fa fa-google"></i>
-                  </a>
-                </li>
-                <li class="animated fadeInRight animation-delay-2">
-                  <a href="javascript:void(0)" class="btn-circle btn-facebook">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                </li>
-                <li class="animated fadeInRight animation-delay-1">
-                  <a href="javascript:void(0)" class="btn-circle btn-twitter">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                </li>
-              </ul>
-              <a href="javascript:void(0)" class="btn-circle btn-circle-primary animated zoomInDown animation-delay-7">
-                <i class="fa fa-share-alt"></i>
-              </a>
-            </div>
-            <a href="javascript:void(0)" class="btn-circle btn-circle-primary no-focus animated zoomInDown animation-delay-8" data-toggle="modal" data-target="#ms-account-modal">
-              <i class="fa fa-user"></i>
-            </a>
-            <form class="search-form animated zoomInDown animation-delay-9">
-              <input id="search-box" type="text" class="search-input" placeholder="Search..." name="q" />
-              <label for="search-box">
-                <i class="fa fa-search"></i>
-              </label>
-            </form>
-            <a href="javascript:void(0)" class="btn-ms-menu btn-circle btn-circle-primary sb-toggle-left animated zoomInDown animation-delay-10">
+    <a href="javascript:void(0)" class="btn-ms-menu btn-circle btn-circle-primary sb-toggle-left animated zoomInDown animation-delay-10">
               <i class="fa fa-reorder"></i>
             </a>
+          
           </div>
         </div>
       </header>
+            <ul class="nav navbar-nav">
+              <li class="btn-navbar-menu"><a href="javascript:void(0)" class="sb-toggle-left"><i class="fa fa-menu"></i></a>
+              </li>
+            </ul> 
 
-
-      <nav class="navbar navbar-static-top yamm ms-navbar ms-navbar-primary">
-        <div class="container container-full">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="index.html">
+            <nav class="navbar navbar-static-top yamm ms-navbar ms-navbar-primary">
+            <div class="navbar-header">
+            <a class="navbar-brand" href="localhost:3000">
               <!-- <img src="assets/img/demo/logo-navbar.png" alt=""> -->
               <span class="ms-logo ms-logo-sm">4G</span>
               <span class="ms-title">
-                <strong>celulares</strong>
+                <strong>..</strong>
               </span>
             </a>
           </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li class="dropdown active">
-                <a href="javascript:void(0)" class="dropdown-toggle animated fadeIn animation-delay-5" data-toggle="dropdown" data-hover="dropdown" data-name="home">Inicio
-                  <i class="fa fa-chevron-down"></i>
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <div class="ms-menu-double">
-                      <ul class="ms-menu-double-main-menu">
-                        <li class="active">
-                          <a href="#tab-1" class="with-label="tab">
-                            <i class="fa fa-home"></i> General Purpose</a>
+             <%= menu_group do %>
 
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="javascript:void(0)" class="dropdown-toggle animated fadeIn animation-delay-5" data-toggle="dropdown" data-hover="dropdown" data-name="page">Desbloqueo Celular
-                  <i class="fa fa-mobile-phone icon-4x"></i>
-                </a>
+        <% if usuario_signed_in? %>
+         <%= menu_item glyph(:user) + "Pedidos", "/pedidos" %>
+    
+         <%= menu_item glyph(:user) + "chequear ", "/chequears" %>
 
-                <ul class="dropdown-menu dropdown-menu-left animated-2x animated fadeIn">
-                  <li class="dropdown-submenu">
-                    <a href="javascript:void(0)" class="has_children">Samsung</a>
-                   
-                  </li>
-                  <li>
-                    <a href="page-all.html" class="has_children">Alcatel</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle animated fadeIn animation-delay-7" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="blog">Chequear Celular
-                  <i class="fa fa-chevron-down"></i>
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a href="blog-sidebar.html">
-                      <i class="fa fa-view-compact"></i>Chequeo 1</a>
-                  </li>
-                  <li>
-                    <a href="blog-sidebar2.html">
-                      <i class="fa fa-view-compact"></i> Chequeo 2</a>
-                  </li>
-                  
-                  <li>
-                    <a href="blog-post2.html">
-                      <i class="fa zmdi-file-text"></i> chequeo 2</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle animated fadeIn animation-delay-8" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="portfolio">Otos Servicios
-                  <i class="fa fa-chevron-down"></i>
-                </a>
-                <ul class="dropdown-menu">
-                  
-                  <li class="divider"></li>
-                  <li>
-                    <a href="portfolio-item.html">
-                      <i class="fa fa-collection-item-1"></i> Servicio 1</a>
-                  </li>
-                  <li>
-                    <a href="portfolio-item2.html">
-                      <i class="fa fa-collection-item-2"></i> Servicio 2</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle animated fadeIn animation-delay-9" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="ecommerce">Reportar
+         <li class="dropdown">
+                <a href="#" class="dropdown-toggle animated fadeIn animation-delay-9" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="ecommerce">OTROS SERVICIOS 
+
                   <i class="fa fa-chevron-down"></i>
                 </a>
                 <ul class="dropdown-menu">
@@ -311,208 +66,82 @@
              
                 </ul>
               </li>
-               <li class="btn-navbar-menu"><a href="javascript:void(0)" class="sb-toggle-left"><i class="zmdi zmdi-menu"></i></a></li>
-            </ul>
-          </div>
+
+        <% end %>
+        <%= menu_group pull: :right do %>
+        <% if usuario_signed_in? %>
+
+         <%= menu_item  current_usuario.email , "" %>
+        <%= menu_item   glyph(:edit) + " Editar Perfil", edit_usuario_password_path %>
+        <%= menu_item  glyph(:log_out) + " Salir", destroy_usuario_session_path, method: :delete, :class => 'text-danger',method: :delete, data: { confirm: 'Estas seguro?' }  %>
+
+        <% else %>
+        <%= menu_item  glyph(:log_in) + " Entrar", new_usuario_session_path  %>
+        <%= menu_item  glyph(:plus_sign) + " Registro", new_usuario_registration_path %>
+        <% end %>
+        <% end -%>
+        <% end %>
+
+          
+                 
           <!-- navbar-collapse collapse -->
           <a href="javascript:void(0)" class="sb-toggle-left btn-navbar-menu">
             <i class="fa fa-reorder"></i>
           </a>
-        </div>
         <!-- container -->
-      </nav>
- <div class="material-background"></div>
-        <div class="ms-hero ms-hero-img-wall ms-bg-fixed pb-4">
-        <div id="carousel-shop" class="ms-carousel-shop carousel carousel-fade slide" data-ride="carousel">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#carousel-shop" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-shop" data-slide-to="1"></li>
-            <li data-target="#carousel-shop" data-slide-to="2"></li>
-          </ol>
-          <div class="container">
-            <div class="carousel-inner" role="listbox">
-              <div class="item active">
-                <div class="row">
-                  <div class="col-md-6 col-md-push-6">
-                    <div class="carousel-caption">
-                      <h1>....... </h1>
-                      <p class="lead">...........................</p>
-                      <ul class="list-unstyled">
-                        <li>.............................</li>
-                        <li>..................................</li>
-                        <li>...................................</li>
-                        <li>..................................</li>
-                      </ul>
-                    <<a href="javascript:void(0)" class="btn btn-success btn-raised">More info</a>
-                      <a href="javascript:void(0)" class="btn btn-primary btn-raised">Buy Now</a>-->
-                    </div>
-                  </div>
-                  <div class="col-md-6 col-md-pull-6">
-                    
-                    <img src="http://localhost:3000/macbook2016.png" class="img-responsive" alt="..."> </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="carousel-caption">
-                      <h1>...............</h1>
-                      <p class="lead">....................</p>
-                      <ul class="list-unstyled">
-                        <li>.............</li>
-                        <li>.........................................</li>
-                        <li>.................................................</li>
-                        <li>......................................</li>
-                      </ul>
-                       <!-- <a href="javascript:void(0)" class="btn btn-success btn-raised">More info</a>
-                      <a href="javascript:void(0)" class="btn btn-primary btn-raised">Buy Now</a>-->
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <img src="http://localhost:3000/watch.png" class="img-responsive" alt="..."> </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="row">
-                  <div class="col-md-6 col-md-push-6">
-                    <div class="carousel-caption">
-                      <h1>.........</h1>
-                      <p class="lead">..............................</p>
-                      <ul class="list-unstyled">
-                        <li>.............................................</li>
-                        <li>...............................................</li>
-                        <li>..................................................</li>
-                        <li>..................</li>
-                      </ul>
-                       <!-- <a href="javascript:void(0)" class="btn btn-success btn-raised">More info</a>
-                      <a href="javascript:void(0)" class="btn btn-primary btn-raised">Buy Now</a>-->
-                    </div>
-                  </div>
-                  <div class="col-md-6 col-md-pull-6">
-                    <img src="http://localhost:3000/surface.png" class="img-responsive" alt="..."> </div>
-                </div>
-              </div>
+      </nav> 
+
+      <div class="material-background">
+        
+      </div> <!-- col-md-3 -->
+ <% if notice %>
+                    <%= bootstrap_flash %> 
+                    <% end %>
+                    <% if alert %>
+                    <%= bootstrap_flash %> 
+                    <% end %>
+         </div>
+            <%= yield %>
+            <!-- col-md-9 -->
+        </div>
+      </div>
+
+
+
+          <!-- row -->
+    
+      
+      <!-- container -->
+     
+      <footer class="ms-footer">
+        <div class="container">
+          <p>EduardoEspinoza &copy; 4Gcelulares</p>
+        </div>
+      </footer>
+     
+    </div>
+    <!-- sb-site-container -->
+    <div class="ms-slidebar sb-slidebar sb-left sb-style-overlay" id="ms-slidebar">
+      
+        <header class="ms-slidebar-header">
+          <div class="ms-slidebar-title">
+            <div class="ms-slidebar-t">
+              <span class="ms-logo ms-logo-sm">4G</span>
+              <h3>
+                <span>Celulares</span>
+              </h3>
             </div>
           </div>
-          <!-- Controls -->
-          <a href="#carousel-shop" class="btn-circle btn-circle-sm btn-circle-raised btn-circle-primary left carousel-control" role="button" data-slide="prev">
-            <i class="fa fa-chevron-left"></i>
-          </a>
-          <a href="#carousel-shop" class="btn-circle btn-circle-sm btn-circle-raised btn-circle-primary right carousel-control" role="button" data-slide="next">
-            <i class="fa fa-chevron-right"></i>
-          </a>
-        </div>
-      
+        </header>
+        <ul class="ms-slidebar-menu" id="slidebar-menu" role="tablist" aria-multiselectable="true">
+          <li class="panel" role="tab" id="sch1">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#slidebar-menu" href="#sc1" aria-expanded="false" aria-controls="sc1">
+              <i class="fa fa-home"></i>Pedidos</a>
+          </li>
+        </ul>
       </div>
-  
+    </div>
 
-<div class="container">
-        <div class="card card-hero card-flat bg-transparent">
-          <div class="row">
+  </body>
 
-            <div class="col-lg-4 col-sm-6">
-              <div class="card card-info wow zoomInUp animation-delay-5">
-                <div class="text-center bg-info">
-                  <a href="javascript:void()" class="">
-                    <img src="http://localhost:3000/samsung.png" alt="..." class="">
-
-                  </a>
-                </div>
-                <div class="card-block text-center">
-                  <h3 class="color-info">Samsung</h3>
-                  <p>Para desbloquear un celular en 4G celulares solo tienes que buscar la marca y modelo de tu dispositivo y seleccionar el país y operador de origen. Una vez recibamos el pago, tu pedido se activará y en un plazo garantizado de entrega recibirás unas sencillas instrucciones de desbloqueo en tu email.
-                    Si necesitas ayuda en cualquier punto del proceso puedes contactar con doctorSIM por chat, celular o redes sociales..</p>
-                  <a href="javascript:void(0)" class="btn btn-info">
-                    <i class="zmdi zmdi-link"></i> Desbloquear</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              <div class="card card-warning wow zoomInUp animation-delay-5">
-                <div class="text-center bg-warning">
-                  <a href="javascript:void()" class="">
-                    <img src="http://localhost:3000/nokia.png" alt="..." class="">
-                  </a>
-                </div>
-                <div class="card-block text-center">
-                  <h3 class="color-warning">Nokia</h3>
-                  <p>Para desbloquear un celular en 4G celulares solo tienes que buscar la marca y modelo de tu dispositivo y seleccionar el país y operador de origen. Una vez recibamos el pago, tu pedido se activará y en un plazo garantizado de entrega recibirás unas sencillas instrucciones de desbloqueo en tu email.
-                    Si necesitas ayuda en cualquier punto del proceso puedes contactar con doctorSIM por chat, celular o redes sociales..</p>
-                  <a href="javascript:void(0)" class="btn btn-warning">
-                    <i class="zmdi zmdi-link"></i> Desbloquear</a>
-                </div>
-              </div>
-            </div>
-             <div class="col-lg-4 col-sm-6">
-              <div class="card card-danger wow zoomInUp animation-delay-5">
-                <div class="text-center bg-danger">
-                  <a href="javascript:void()" class="">
-                    <img src="http://localhost:3000/sony.png" alt="..." class="">
-                  </a>
-                </div>
-                <div class="card-block text-center">
-                  <h3 class="color-danger">Sony</h3>
-                  <p>Para desbloquear un celular en 4G celulares solo tienes que buscar la marca y modelo de tu dispositivo y seleccionar el país y operador de origen. Una vez recibamos el pago, tu pedido se activará y en un plazo garantizado de entrega recibirás unas sencillas instrucciones de desbloqueo en tu email.
-                    Si necesitas ayuda en cualquier punto del proceso puedes contactar con doctorSIM por chat, celular o redes sociales..</p>
-                  <a href="javascript:void(0)" class="btn btn-danger">
-                    <i class="zmdi zmdi-link"></i> Desbloquear</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-6">
-              <div class="card card-royal wow zoomInUp animation-delay-5">
-                <div class="text-center bg-royal">
-                  <a href="javascript:void()" class="">
-                    <img src="http://localhost:3000/-huawei.png" alt="50" width="130" height="100" class="">
-                  </a>
-                </div>
-                <div class="card-block text-center">
-                  <h3 class="color-royal">Huawei</h3>
-                  <p>Para desbloquear un celular en 4G celulares solo tienes que buscar la marca y modelo de tu dispositivo y seleccionar el país y operador de origen. Una vez recibamos el pago, tu pedido se activará y en un plazo garantizado de entrega recibirás unas sencillas instrucciones de desbloqueo en tu email.
-                    Si necesitas ayuda en cualquier punto del proceso puedes contactar con doctorSIM por chat, celular o redes sociales..</p>
-                  <a href="javascript:void(0)" class="btn btn-royal">
-                    <i class="zmdi zmdi-link"></i> Desbloquear</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              <div class="card card-success wow zoomInUp animation-delay-5">
-                <div class="text-center bg-success">
-                  <a href="javascript:void()" class="">
-                    <img src="http://localhost:3000/blu.png" alt="..." width="100" height="100" class="">
-                  </a>
-                </div>
-                <div class="card-block text-center">
-                  <h3 class="color-success">Blu</h3>
-                  <p>Para desbloquear un celular en 4G celulares solo tienes que buscar la marca y modelo de tu dispositivo y seleccionar el país y operador de origen. Una vez recibamos el pago, tu pedido se activará y en un plazo garantizado de entrega recibirás unas sencillas instrucciones de desbloqueo en tu email.
-                    Si necesitas ayuda en cualquier punto del proceso puedes contactar con doctorSIM por chat, celular o redes sociales..</p>
-                  <a href="javascript:void(0)" class="btn btn-success">
-                    <i class="zmdi zmdi-link"></i>Desbloquear</a>
-                </div>
-              </div>
-            </div>
-             <div class="col-lg-4 col-sm-6">
-              <div class="card card-scarey wow zoomInUp animation-delay-5">
-                <div class="text-center bg-danger">
-                  <a href="javascript:void()" class="">
-                    <img src="http://localhost:3000/alcatel-logo.png" alt="..." width="100" height="100" class="">
-                  </a>
-                </div>
-                <div class="card-block text-center">
-                  <h3 class="color-info">Alcatel</h3>
-                  <p>Para desbloquear un celular en 4G celulares solo tienes que buscar la marca y modelo de tu dispositivo y seleccionar el país y operador de origen. Una vez recibamos el pago, tu pedido se activará y en un plazo garantizado de entrega recibirás unas sencillas instrucciones de desbloqueo en tu email.
-                    Si necesitas ayuda en cualquier punto del proceso puedes contactar con doctorSIM por chat, celular o redes sociales..</p>
-                  <a href="javascript:void(0)" class="btn btn-success">
-                    <i class="zmdi zmdi-link"></i>Desbloquear</a>
-                </div>
-              </div>
-            </div>
-        </div>
-      </div>
-      <%= yield %>
-<script src="assets/js/plugins.min.js"></script>
-    <script src="assets/js/app.min.js"></script>
-</body>
 </html>
