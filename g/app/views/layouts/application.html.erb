@@ -47,12 +47,14 @@
               </span>
             </a>
           </div>
-             <%= menu_group do %>
 
+             <%= menu_group do %>
         <% if usuario_signed_in? %>
          <%= menu_item glyph(:user) + "Desbloquear ", "/marcas" %>
     
-         <%= menu_item glyph(:user) + "chequear ", "/chequears" %>
+         <%= menu_item glyph(:user) + "Chequear ", "/chequears" %>
+
+         <%= menu_item glyph(:user) + "Reportar ", "/pedidos" %>
 
          <li class="dropdown">
                 <a href="#" class="dropdown-toggle animated fadeIn animation-delay-9" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="ecommerce">OTROS SERVICIOS 
