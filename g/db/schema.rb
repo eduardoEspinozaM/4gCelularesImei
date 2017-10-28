@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171023024330) do
+ActiveRecord::Schema.define(version: 20171024002733) do
 
   create_table "chequears", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "imei"
@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 20171023024330) do
   create_table "pedidos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.integer "operadora_id"
     t.integer "telefono_id"
-    t.integer "imei"
+    t.bigint "imei"
     t.string "email"
     t.string "nro_telefono"
     t.decimal "total", precision: 10

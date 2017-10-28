@@ -13,12 +13,18 @@
 
   <div class="field">
     <%= form.label :modelo_id %>
-    <%= form.number_field :modelo_id, id: :telefono_modelo_id %>
+    <% modelo_array = Modelo::all.map { |modelo| ["Modelo: #{modelo.nombre}", modelo.id ] }  %>
+    <div class="col-lg-12">
+      <%= form.select(:modelo_id, options_for_select(modelo_array), {prompt: true}, {class: 'form-control'})  %>
+    </div>
   </div>
 
   <div class="field">
     <%= form.label :tipo_id %>
-    <%= form.number_field :tipo_id, id: :telefono_tipo_id %>
+    <% tipo_array = Tipo::all.map { |tipo| ["Tipo: #{tipo.nombre}", tipo.id ] }  %>
+    <div class="col-lg-12">
+      <%= form.select(:tipo_id, options_for_select(tipo_array), {prompt: true}, {class: 'form-control'})  %>
+    </div>
   </div>
 
   <div class="actions">
