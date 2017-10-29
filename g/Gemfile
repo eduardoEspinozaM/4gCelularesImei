@@ -1,0 +1,82 @@
+source 'https://rubygems.org'
+
+git_source(:github) do |repo_name|
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  "https://github.com/#{repo_name}.git"
+end
+
+
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '~> 5.1.4'
+# Use sqlite3 as the database for Active Record
+#gem 'sqlite3'
+
+gem 'mysql2', '0.3.21'
+
+gem 'devise'
+#gem "font-awesome-rails"
+#gem 'font-awesome-sass', '~> 4.7.0'
+#gem 'material_icons'
+
+gem 'execjs'
+gem 'rdoc', '~> 4.2'
+gem 'glyphicons-rails', '~> 0.1.2'
+gem 'jquery-countdown-rails', '~> 2.0', '>= 2.0.2'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+
+#gem 'therubyracer'
+gem 'coffee-script-source', '1.8.0'
+gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
+
+#gem "bcrypt-ruby", '~> 3.0.0'
+
+# Use Puma as the app server
+gem 'puma', '~> 3.7'
+# Use SCSS for stylesheets
+# Use Uglifier as compressor for JavaScript assets
+# See https://github.com/rails/execjs#readme for more supported runtimes
+# gem 'therubyracer', platforms: :ruby
+
+gem 'bootstrap-sass'
+# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
+gem 'turbolinks', '~> 5'
+gem 'jquery-turbolinks'
+# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'jbuilder', '~> 2.5'
+# Use Redis adapter to run Action Cable in production
+# gem 'redis', '~> 3.0'
+# Use ActiveModel has_secure_password
+# gem 'bcrypt', '~> 3.1.7'
+
+# Use Capistrano for deployment
+# gem 'capistrano-rails', group: :development
+
+group :development, :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # Adds support for Capybara system testing and selenium driver
+  gem 'capybara', '~> 2.13'
+  gem 'selenium-webdriver'
+end
+
+group :development do
+  # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
+  gem 'web-console', '>= 3.3.0'
+end
+
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+group :assets do
+  gem 'sass-rails', '~> 5.0', '>= 5.0.6'
+  #gem 'coffee-rails', '~> 3.2.1'
+  gem 'coffee-rails', '~> 4.2', '>= 4.2.2'
+
+  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
+  # gem 'therubyracer', :platform => :ruby
+
+  gem 'uglifier', '~> 3.2.0'
+  gem 'jquery-datatables-rails', '~> 3.4.0'
+  gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
+
+end

@@ -13,8 +13,12 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # folder are already added.
 Rails.application.config.assets.precompile += %w( preload.css )
 Rails.application.config.assets.precompile += %w( plugins.css )
+
+Rails.application.config.assets.precompile += %w( Tables.css )
+Rails.application.config.assets.precompile += %w( Tablesbootstrap.css )
 Rails.application.config.assets.precompile += %w( style.css )
 
 Rails.application.config.assets.precompile += %w( app.js )
 Rails.application.config.assets.precompile += %w( plugins.js )
+Rails.application.config.assets.precompile += %w( dataTables.js )
 Rails.application.config.assets.precompile += %w( configurator.js )

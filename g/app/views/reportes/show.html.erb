@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Marca:</strong>
+  <%= @reporte.marca %>
+</p>
+
+<p>
+  <strong>Modelo:</strong>
+  <%= @reporte.modelo %>
+</p>
+
+<p>
+  <strong>Imei:</strong>
+  <%= @reporte.imei %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @reporte.tipo %>
+</p>
+
+<p>
+  <strong>Operador:</strong>
+  <%= @reporte.operador %>
+</p>
+
+<p>
+  <strong>Estador:</strong>
+  <%= @reporte.estadoR %>
+</p>
+
+<p>
+  <strong>Estadop:</strong>
+  <%= @reporte.estadoP %>
+</p>
+
+<p>
+  <strong>Ciudad:</strong>
+  <%= @reporte.ciudad %>
+</p>
+
+<%= link_to 'Edit', edit_reporte_path(@reporte) %> |
+<%= link_to 'Back', reportes_path %>

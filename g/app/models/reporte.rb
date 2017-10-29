@@ -1,0 +1,2 @@
+class Reporte < ApplicationRecord
+end

@@ -7,37 +7,19 @@
         <%= stylesheet_link_tag    'preload' %>
         <%= stylesheet_link_tag    'plugins' %>
         <%= stylesheet_link_tag    'style' %>
+        <%= stylesheet_link_tag    'Tablesbootstrap' %>
 
        <%= javascript_include_tag 'plugins' %>
         <%= javascript_include_tag 'app' %>
         <%= javascript_include_tag 'configurator' %>
+        <%= javascript_include_tag 'dataTables' %>
         <%= csrf_meta_tags %>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
     </head>
     <body>
-        <div class="sb-site-container">
-            <!-- Modal -->
-            <div class="modal modal-primary" id="ms-account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                <div class="modal-dialog animated zoomIn animated-3x" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header shadow-2dp no-pb">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">
-                            <i class="zmdi zmdi-close"></i>
-                            </span>
-                            </button>
-                            <div class="modal-title text-center">
-                                <span class="ms-logo ms-logo-white ms-logo-sm mr-1">4G</span>
-                                <h3 class="no-m ms-site-title">
-                                    <span>Celulares</span>
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+       
             <header class="ms-header ms-header-primary">
                 <div class="container container-full">
                     <div class="ms-title">
@@ -71,9 +53,9 @@
 
         <%= menu_group do %>
         <% if usuario_signed_in? %>
-         <%= menu_item glyph(:new_window) + "Desbloquear ", "" %>
+         <%= menu_item glyph(:new_window) + "Chequear", "/chequears" %>
     
-         <%= menu_item glyph(:new_window) + "Chequear ", "/chequears" %>
+         <%= menu_item glyph(:new_window) + "Desbloquear", "/pedidos" %>
 
          <%= menu_item glyph(:new_window) + "Reportar ", "localhost:3000" %>
 

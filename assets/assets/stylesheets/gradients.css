@@ -1,0 +1,74 @@
+/* GRADIENTS */
+
+.overlay:after {
+	opacity:1 !important;
+}
+
+#team.overlay:after ,
+#info.overlay:after {
+	opacity:0.85 !important;
+}
+
+
+.navbar-brand i {
+	color:#fff !important;
+}
+
+.gradient1.overlay:after {
+background: #ee0979;
+background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
+background: linear-gradient(to right, #ff6a00, #ee0979);
+}
+
+.gradient2.overlay:after {
+background: #0099F7;
+background: -webkit-linear-gradient(to right, #F11712, #0099F7);
+background: linear-gradient(to right, #F11712, #0099F7);
+}
+
+.gradient3.overlay:after {
+background: #fc00ff;
+background: -webkit-linear-gradient(to right, #00dbde, #fc00ff);
+background: linear-gradient(to right, #00dbde, #fc00ff);
+
+}
+
+.gradient4.overlay:after {
+background: #360033;
+background: -webkit-linear-gradient(to right, #0b8793, #360033);
+background: linear-gradient(to right, #0b8793, #360033);
+
+}
+
+.gradient5.overlay:after {
+background: #00c6ff;
+background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);
+background: linear-gradient(to right, #0072ff, #00c6ff);
+
+}
+
+.gradient6.overlay:after {
+background: #1A2980;
+background: -webkit-linear-gradient(to right, #26D0CE, #1A2980);
+background: linear-gradient(to right, #26D0CE, #1A2980);
+
+}
+
+.gradient7.overlay:after {
+background: #D31027;
+background: -webkit-linear-gradient(to right, #EA384D, #D31027);
+background: linear-gradient(to right, #EA384D, #D31027);
+
+}
+
+.gradient8.overlay:after {
+background: #16BFFD;
+background: -webkit-linear-gradient(to right, #CB3066, #16BFFD);
+background: linear-gradient(to right, #CB3066, #16BFFD);
+}
+
+.gradient-custom.overlay:after {
+
+
+}
+

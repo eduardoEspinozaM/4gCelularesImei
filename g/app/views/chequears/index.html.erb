@@ -1,68 +1,177 @@
-
-<div class="wrap ms-hero-img-beach ms-hero-bg-primary ms-bg-fixed">
-     <div class="container index-1">
-         <div class="text-center color-white mw-800 center-block mb-4">
-            <h2>Averigua el estado de tu celular en segundos. </h2>
+<div class="modal modal-primary" id="ms-account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+   <div class="modal-dialog animated zoomIn animated-3x" role="document">
+      <div class="modal-content">
+         <div class="modal-header shadow-2dp no-pb">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+            <i class="zmdi zmdi-close"></i>
+            </span>
+            </button>
+            <div class="modal-title text-center">
+               <span class="ms-logo ms-logo-white ms-logo-sm mr-1">4G</span>
+               <h3 class="no-m ms-site-title">
+                  <span>Celulares</span>
+               </h3>
+            </div>
+            <div class="modal-header-tabs">
+               <ul class="nav nav-tabs nav-tabs-full nav-tabs-3 nav-tabs-primary" role="tablist">
+                  <!--    <li role="presentation">
+                     <a href="#ms-register-tab" aria-controls="ms-register-tab" role="tab" data-toggle="tab" class="withoutripple">
+                       <i class="zmdi zmdi-account-add"></i> Register</a>
+                     </li>
+                     <li role="presentation">
+                     <a href="#ms-recovery-tab" aria-controls="ms-recovery-tab" role="tab" data-toggle="tab" class="withoutripple">
+                       <i class="zmdi zmdi-key"></i> Recovery Pass</a>
+                     </li>-->
+               </ul>
+            </div>
          </div>
-  <div class="row color-dark">
-     <div class="col-lg-12 col-md-12 col-xs-12 mix smartphone samsung" data-price="569.99" data-date="20151201">
-       <div class="card wow zoomInUp" style="visibility: visible; animation-name: zoomInUp;">
-        <div class="icon_free"><img title="Chequear celular gratis" alt="Chequear gratis tu celular" src="//d13rxepuu2fckz.cloudfront.net/img/icon_free_ds.png"></div>
-           <h1>
-            <div class="card-block text-center">
-                Teclea *#06# en tu celular para conocer tu IMEI. Solo los 15 primeros dígitos sin espacios ni guiones.
-            </h1>'
+         <section class="ms-component-section ">
+            <div class="wrap-inverse bg-Info">
+               <h2 class="section-title text-center">Información sobre tu dispositivo</h2>
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="card mt-4">
+                        <blockquote class="blockquote-avatar right withripple">
+                             
 
-        <form class="intro-form" >
-        <div class="row row-ds" style="margin-top:15px;">
-          <form id="no_disp_form" action="#" method="post" novalidate="novalidate">
-        <div class="col-sm-8 col-md-8 col-lg-8 text-center">
-        <input id="imei" name="imei" type="text" class="form-control input-checkimei text-16 required" placeholder="Código IMEI: ej. 011950004980028" value="">
-        </div>
-        <br>
-        <div class="col-xs-2">
-        <input type="submit" name="commit" value="Chequear" class="btn btn-primary btn-sm btn-block btn-raised mt-2 no-mb" data-disable-with="Chequear celular">
-        </div>
-        <div class="col-xs-12">
-        <div id="error_p" style="margin:10px 0 0 20px;"></div>
-        </div>
-        <div class="col-xs-12 check-condiciones">
-        <div class="checkbox">
-        <label>
-        <input name="email_check" id="email_check" type="checkbox" checked=""> He leído y acepto las <a id="terminos_link" data-toggle="modal" href="#" data-target="#terms">Condiciones de Uso</a> y <a id="privacidad_link" data-toggle="modal" href="#" data-target="#privacidad">Privacidad</a> </label>
-        </div>
-        </div>
-        </form>
-        </div>
-        </div>
-    </div>
-    <!-- conrainer -->
-</div><
+                            <div class="col-sm-6"><cite title="Source Title ">Marca:   </cite>
+                           <span class="label label-primary"> Samsumg </span></div>
+
+
+                            <div class="col-sm-6"><cite title="Source Title col-md-12"> Modelo:  </cite>
+                           <span class="label label-primary"> SM-G920I  </span></div>
+
+                           <br>
+                           <br>
+
+
+
+                            <div class="col-sm-6"> <cite title="Source Title"> Imaei:  </cite>
+                           <span class="label label-primary">  352458564785125  </span></div>
+                            
+                          
+                                <div class="col-sm-4"> <cite title="Source Title">  Tipo:  </cite>
+                           <span class="label label-primary">  Gsm  </span></div>
+                            <br>
+                           <br>
+                           <br>
+
+                                <div class="col-sm-6">  <cite title="Source Title">  Operadora:  </cite>
+                           <span class="label label-primary"> Personal  </span></div>
+
+
+                                 <div class="col-sm-6"> <cite title="Source Title"> Ciudad:  </cite>
+                           <span class="label label-primary"> SM-G920I </span></div>
+
+                           
+
+
+                        </blockquote>
+                     </div>
+
+                     <div class="panel panel-dark panel-danger">
+                        <div class="panel-heading">
+                           <h3 class="panel-title">
+                              <i class="zmdi zmdi-globe"></i>¡Atención! 
+                           </h3>
+                        </div>
+                        <div class="panel-body">
+                           <p>Este IMEI no se encontró en la base de datos local de celulares reportados (blacklisted).</p>
+                        </div>
+                     </div>
+                     <div class="panel panel-success panel-code">
+                        <div class="panel-heading panel-code-heading" role="tab" id="codeHead2">
+                           <h4 class="panel-title panel-code-title">
+                              <a class="collapsed withripple" role="button" data-toggle="collapse" href="#code2" aria-expanded="false" aria-controls="code2">
+                              <i class="zmdi zmdi-code"></i> ¿Por qué chequear el estado de tu teléfono? </a>
+                           </h4>
+                        </div>
+                        <div id="code2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="codeHead2">
+                           <div class="panel-code-body">
+                              <pre>
+                            <ul class="fa-ul clearfix text-14" style="margin-left:0px;">
+<li><i class="zmdi zmdi-check fa-fw text-primary"></i> Es un chequeo vital si vas a comprar un celular de segunda mano.</li>
+<li><i class="zmdi zmdi-check fa-fw text-primary"></i> Si vas a vender tu teléfono, el informe dará seguridad al comprador.</li>
+<li><i class="zmdi zmdi-check fa-fw text-primary"></i> Te sacará de dudas si tu celular no funciona correctamente.</li>
+<li><i class="zmdi zmdi-check fa-fw text-primary"></i> Si tienes cualquier duda, tenemos el mejor soporte a tu disposición.</li>
+</ul>
+                            <code class="language-markup line-numbers"></code></pre>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- panel-code -->
+            </div>
+         </section>
+      </div>
+   </div>
 </div>
+<div class="wrap ms-hero-img-beach ms-hero-bg-primary ms-bg-fixed">
+<div class="container index-1">
+   <div class="text-center color-white mw-800 center-block mb-4">
+      <h2>Averigua el estado de tu celular en segundos. </h2>
+   </div>
+   <div class="row color-dark">
+      <div class="col-lg-12 col-md-12 col-xs-12 mix smartphone samsung" data-price="569.99" data-date="20151201">
+         <div class="card wow zoomInUp" style="visibility: visible; animation-name: zoomInUp;">
+            <div class="icon_free"><img title="Chequear celular gratis" alt="Chequear gratis tu celular" src="//d13rxepuu2fckz.cloudfront.net/img/icon_free_ds.png"></div>
+            <h1>
+               <div class="card-block text-center">
+                  Teclea *#06# en tu celular para conocer tu IMEI. Solo los 15 primeros dígitos sin espacios ni guiones.
+            </h1>
+            '
+            <form class="intro-form" >
+            <div class="row row-ds" style="margin-top:15px;">
+            <form id="no_disp_form" action="#" method="post" novalidate="novalidate">
+            <div class="col-sm-8 col-md-8 col-lg-8 text-center">
+            <input id="imei" name="imei" type="text" class="form-control input-checkimei text-16 required" placeholder="Código IMEI: ej. 011950004980028" value="">
+            </div>
+            <br>
+            <a href="javascript:void(0)" class="btn btn-raised btn-primary " data-toggle="modal" data-target="#ms-account-modal">
+            <i class="zmdi zmdi-open-in-new 5x"> Chequear</i>
+            </a>
+            <div class="col-xs-12">
+            <div id="error_p" style="margin:10px 0 0 20px;"></div>
+            </div>
+            <div class="col-xs-12 check-condiciones">
+            <div class="checkbox">
+            <label>
+            <input name="email_check" id="email_check" type="checkbox" checked=""> He leído y acepto las <a id="terminos_link" data-toggle="modal" href="#" data-target="#terms">Condiciones de Uso</a> y <a id="privacidad_link" data-toggle="modal" href="#" data-target="#privacidad">Privacidad</a> </label>
+            </div>
+            </div>
+            </form>
+            </div>
+            </div>
+         </div>
+         <!-- conrainer -->
+      </div>
+      <
+   </div>
 </div>
 <p id="notice"><%= notice %></p>
 <h1>Chequears</h1>
 <table>
-    <thead>
-        <tr>
-            <th>Imei</th>
-            <th colspan="3"></th>
-        </tr>
-    </thead>
-    <tbody>
-        <% @chequears.each do |chequear| %>
-        <tr>
-            <td><%= chequear.imei %></td>
-            <td><%= link_to 'Show', chequear %></td>
-            <td><%= link_to 'Edit', edit_chequear_path(chequear) %></td>
-            <td><%= link_to 'Destroy', chequear, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-        <% end %>
-    </tbody>
+   <thead>
+      <tr>
+         <th>Imei</th>
+         <th colspan="3"></th>
+      </tr>
+   </thead>
+   <tbody>
+      <% @chequears.each do |chequear| %>
+      <tr>
+         <td><%= chequear.imei %></td>
+         <td><%= link_to 'Show', chequear %></td>
+         <td><%= link_to 'Edit', edit_chequear_path(chequear) %></td>
+         <td><%= link_to 'Destroy', chequear, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      <% end %>
+   </tbody>
 </table>
 <br>
 <%= link_to 'New Chequear', new_chequear_path %>
 </table>
 <br>
 <%= link_to 'New Chequear', new_chequear_path %>
-

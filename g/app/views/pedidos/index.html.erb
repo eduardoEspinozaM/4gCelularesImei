@@ -1,5 +1,6 @@
-
-                  <table id="link_to" class="table table-striped table-bordered ">
+  <div>
+                  <div class="col-md-9 ms-paper-content-container">
+                  <table id="explorenav">
                      <div class=" table-responsive">
                         <thead>
                            <tr>
@@ -29,10 +30,37 @@
                            </tr>
                            <% end %>
                         </tbody>
+                      </div>
                   </table>
                   </div>
-              
-<script>
+
+ </div>
+<script >
+  $('.nav li#explorenav a').click(function(){
+    $('body').animate({scrollLeft: $("#explore").offset().left-15}, 1000, function(){
+        $(this).parent().addClass('active');
+    });
+
+    return false;
+});
+
+$('.nav li#experiencenav a').click(function(){
+    $('body').animate({scrollLeft: $("#experience").offset().left-15}, 1200, function(){
+        $(this).parent().addClass('active');
+    });
+
+    return false;
+});
+  $(document).ready(function(){
+    $('#explorenav').DataTable();
+});
+
+</script>
+
+
+
+   
+<!--<script>
    $(document).ready(function() {
      $('#link_to').DataTable( {
          responsive: true,
@@ -69,4 +97,4 @@
          }
      } );
      } );
-</script>
+</script>-->
