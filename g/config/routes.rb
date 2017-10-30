@@ -9,10 +9,10 @@ Rails.application.routes.draw do
   resources :modelos
   devise_for :usuarios,  controllers: { sessions: "usuarios/sessions", registrations: "usuarios/registrations", passwords: "usuarios/passwords"  }, :path_names => {:sign_in => 'login', :sign_up => 'registro', :sign_out => 'logout'}
   as :usuario do
-    get 'sign_in' => 'usuarios/sessions#new', :as => :new_usuario_session_path
-    get 'sign_up' => 'usuarios/registrations#create', :as => :usuario_registration_path
-    delete 'sign_out' => 'usuarios/sessions#destroy', :as => :destroy_usuario_session_path
-    get 'new' => 'usuarios/sessions#destroy', :as => :new_usuario_password_path
+    #get 'sign_in' => 'usuarios/sessions#new', :as => :new_usuario_session_path
+    #get 'sign_up' => 'usuarios/registrations#create', :as => :usuario_registration_path
+    #delete 'sign_out' => 'usuarios/sessions#destroy', :as => :destroy_usuario_session_path
+    #get 'new' => 'usuarios/sessions#destroy', :as => :new_usuario_password_path
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'marcas#buscar'

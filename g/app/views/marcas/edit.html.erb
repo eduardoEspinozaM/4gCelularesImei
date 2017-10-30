@@ -1,7 +1,13 @@
 <div class="col-md-9 ms-paper-content-container">
     <div class="ms-paper-content">
         <h1>Editar Marca</h1>
-        <p id="notice"><%= notice %></p>
+        
+        <% if notice %>
+            <div class="alert alert-success alert-dismissible" role="alert">
+                <p><%= notice %></p>
+            </div>
+        <%end%>
+        
         <section class="ms-component-section">
             <div class="bs-example">
             	<%= render 'form', marca: @marca %>

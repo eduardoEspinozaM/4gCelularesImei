@@ -1,6 +1,6 @@
 class Usuarios::SessionsController < Devise::SessionsController
 
-layout 'application'
+#layout 'application'
   # before_action :configure_sign_in_params, only: [:create]
 
   # GET /resource/sign_in
