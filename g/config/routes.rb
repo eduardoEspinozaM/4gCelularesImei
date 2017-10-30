@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :reportes
+  resources :reportados
   resources :chequears
   resources :forma_pagos
   resources :paises
@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     #get 'new' => 'usuarios/sessions#destroy', :as => :new_usuario_password_path
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root to: 'marcas#buscar'
+  root to: 'chequears#index'
 
   resources :telefonos do
     collection do

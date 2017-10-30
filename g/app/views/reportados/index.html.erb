@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Reportados</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Marca</th>
+      <th>Modelo</th>
+      <th>Imei</th>
+      <th>Tipo</th>
+      <th>Operador</th>
+      <th>Estador</th>
+      <th>Estadop</th>
+      <th>Ciudad</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reportados.each do |reportado| %>
+      <tr>
+        <td><%= reportado.marca %></td>
+        <td><%= reportado.modelo %></td>
+        <td><%= reportado.imei %></td>
+        <td><%= reportado.tipo %></td>
+        <td><%= reportado.operador %></td>
+        <td><%= reportado.estadoR %></td>
+        <td><%= reportado.estadoP %></td>
+        <td><%= reportado.ciudad %></td>
+        <td><%= link_to 'Show', reportado %></td>
+        <td><%= link_to 'Edit', edit_reportado_path(reportado) %></td>
+        <td><%= link_to 'Destroy', reportado, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reportado', new_reportado_path %>

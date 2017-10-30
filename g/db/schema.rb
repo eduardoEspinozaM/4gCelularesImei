@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171029205526) do
+ActiveRecord::Schema.define(version: 20171030120541) do
 
   create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "email", default: "", null: false
@@ -81,6 +81,19 @@ ActiveRecord::Schema.define(version: 20171029205526) do
     t.integer "formapago_id"
   end
 
+  create_table "reportados", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string "marca"
+    t.string "modelo"
+    t.bigint "imei"
+    t.string "tipo"
+    t.string "operador"
+    t.boolean "estadoR"
+    t.boolean "estadoP"
+    t.string "ciudad"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "reportes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "marca"
     t.string "modelo"
@@ -89,7 +102,7 @@ ActiveRecord::Schema.define(version: 20171029205526) do
     t.string "operador"
     t.string "estadoR"
     t.boolean "estadoP"
-    t.boolean "ciudad"
+    t.string "ciudad", limit: 1
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

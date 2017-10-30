@@ -31,9 +31,9 @@
                             <td><%= marca.id %></td>
                             <td><%= marca.nombre %></td>
                             <td class="col-md-6">
-                                <%= link_to 'Show', marca, class: 'btn-sm btn btn-raised btn-info' %>
-                                <%= link_to 'Edit', edit_marca_path(marca), class: 'btn-sm btn btn-raised btn-warning' %>
-                                <%= link_to 'Destroy', marca, data: { confirm: 'Are you sure?' }, class: 'btn-sm btn btn-raised btn-danger', method: :delete %>
+                                <%= link_to 'ver', marca, class: 'btn-sm btn btn-raised btn-info' %>
+                                <%= link_to 'editar', edit_marca_path(marca), class: 'btn-sm btn btn-raised btn-warning ' %>
+                                <%= link_to 'Eliminar', marca, data: { confirm: 'Are you sure?' }, class: 'btn-sm btn btn-raised btn-danger', method: :delete %>
                             </td>
                         </tr>
                         <% end %>
