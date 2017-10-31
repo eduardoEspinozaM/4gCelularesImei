@@ -1,4 +1,50 @@
-<p id="notice"><%= notice %></p>
+<div class="col-md-9 ms-paper-content-container">
+    <div class="ms-paper-content">
+        <h1>Editar Marca</h1>
+        <% if notice %>
+            <div class="alert alert-success alert-dismissible" role="alert">
+                <p><%= notice %></p>
+            </div>
+        <%end%>
+        <section class="ms-component-section">
+            <div class="bs-example">
+				<p>
+				  <strong>modelo:</strong>
+				  <%= @telefono.modelo_id %>
+				</p>
+					<p>
+				  <strong>Tipo:</strong>
+                  <%= @telefono.tipo_id %>
+				</p>
+
+
+				<%= link_to 'Edit', edit_telefono_path(@telefono) %> |
+                <%= link_to 'Back', telefonos_path %>
+            </div>
+            <!-- panel-code -->
+        </section>
+    </div>
+    <!-- ms-paper-content -->
+</div>
+
+
+
+
+
+
+                   
+
+
+
+                    <div class="form-group">
+                        <label for="select111" class="col-md-2 control-label">Select</label>
+                        <div class="col-md-10">
+                          <select id="select111" class="form-control selectpicker" data-dropup-auto="false">
+                            <option>Ea nam qui vel consequatur</option>
+                          </select>
+                        </div>
+                      </div>
+
 
 <p>
   <strong>Modelo:</strong>

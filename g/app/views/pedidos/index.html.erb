@@ -1,100 +1,65 @@
-  <div>
-                  <div class="col-md-9 ms-paper-content-container">
-                  <table id="explorenav">
-                     <div class=" table-responsive">
+<div class="col-md-9 ms-paper-content-container">
+    <div class="ms-paper-content">
+        <h1>
+            Pedidos
+           <!--  <small class="pull-right">
+            <%= link_to 'Nuevo Pedido', new_pedido_path, class: 'btn-sm btn btn-raised btn-primary' %>
+            </small> -->
+        </h1>
+        <% if notice %>
+        <div class="alert alert-success alert-dismissible" role="alert">
+            <p><%= notice %></p>
+        </div>
+        <%end%>
+        <section class="ms-component-section">
+            <div class="row">
+            <div class="col-md-12">
+                <h2 class="section-title" id="tables-example">Listado</h2>
+                <!-- <p>For basic styling&mdash;light padding and only horizontal dividers&mdash;add the base class <code>.table</code> to any <code>&lt;table&gt;</code>. It may seem super redundant, but given the widespread use of tables for other plugins
+                    like calendars and date pickers, we've opted to isolate our custom table styles.</p> -->
+                <div class="bs-example table'responsive">
+                    <table class="table">
                         <thead>
-                           <tr>
-                              <td>Oooperadora</td>
-                              <td>Telefono</td>
-                              <td>Imei</td>
-                              <td>Email</th>
-                              <td>Nro telefono</td>
-                              <td>Total</td>
-                              <td>Estado pago</td>
-                              <td colspan="3"></td>
-                           </tr>
-                           </h2>
+                            <tr>
+                                <td>Operadora</td>
+                                <!-- <td>Telefono</td> -->
+                                <td>Imei</td>
+                                <td>Email</th>
+                                <td>Nro telefono</td>
+                                <td>Total</td>
+                                <td>Estado pago</td>
+                                <td></td>
+                            </tr>
                         </thead>
                         <tbody>
-                           <% @pedidos.each do |pedido| %>
-                           <tr>
-                              <td><%= pedido.operadora_id %></td>
-                              <td><%= pedido.telefono_id %></td>
-                              <td><%= pedido.imei %></td>
-                              <td><%= pedido.email %></td>
-                              <td><%= pedido.nro_telefono %></td>
-                              <td><%= pedido.total %></td>
-                              <td><%= pedido.estado_pago %></td>
-                              <td><%= link_to '', pedido, class: "fa fa-external-link ms-icon ms-icon-sm" %></td>
-                              <td><%= link_to '', pedido, class: " fa fa-trash-o ms-icon ms-icon-sm  color-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
-                           </tr>
-                           <% end %>
+                            <% @pedidos.each do |pedido| %>
+                            <tr>
+                                <td><%= pedido.operadora.nombre %></td>
+                                <!-- <td><%= pedido.telefono.modelo.nombre %> <%= pedido.telefono.tipo.nombre %></td> -->
+                                <td><%= pedido.imei %></td>
+                                <td><%= pedido.email %></td>
+                                <td><%= pedido.nro_telefono %></td>
+                                <td><%= pedido.total %></td>
+                                <td>
+                                    <%if(pedido.estado_pago) %>
+                                    <span class="text-success">Pagado</span>
+                                    <% else %>
+                                    <span class="text-danger">Pendiente</span>
+                                    <% end %>
+                                </td>
+                                <td>
+                                  <%= link_to '', pedido, class: "mr-1 zmdi zmdi-check zmdi-hc-fw" %>
+
+                                  <%= link_to '', pedido, data: { confirm: 'Are you sure?' }, class: ' mr-1 zmdi zmdi-close zmdi-hc-fw color-danger', method: :delete %>
+                                </td>
+                            </tr>
+                            <% end %>
                         </tbody>
-                      </div>
-                  </table>
-                  </div>
-
- </div>
-<script >
-  $('.nav li#explorenav a').click(function(){
-    $('body').animate({scrollLeft: $("#explore").offset().left-15}, 1000, function(){
-        $(this).parent().addClass('active');
-    });
-
-    return false;
-});
-
-$('.nav li#experiencenav a').click(function(){
-    $('body').animate({scrollLeft: $("#experience").offset().left-15}, 1200, function(){
-        $(this).parent().addClass('active');
-    });
-
-    return false;
-});
-  $(document).ready(function(){
-    $('#explorenav').DataTable();
-});
-
-</script>
-
-
-
-   
-<!--<script>
-   $(document).ready(function() {
-     $('#link_to').DataTable( {
-         responsive: true,
-         "bProcessing": true,
-         //"sPaginationType": "full_numbers",
-         "paging": true,
-         "iDisplayLength": 10,
-         "bPaginate": true,
-         "bSort": true,
-         "oLanguage": {
-             "oPaginate": {
-                 "sPrevious": "←",
-                 "sNext": "→",
-                 "sLast": "»",
-                 "sFirst": "«"
-             },
-             "sProcessing": "Procesando...",
-             "sLengthMenu": "Mostrar _MENU_ registros",
-             "sZeroRecords": "No se encontraron resultados",
-             "sEmptyTable": "Ningún dato disponible en esta tabla",
-             "sInfo": "Mostrando de _START_ al _END_ de _TOTAL_ registros",
-             //"sInfo": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
-             "sInfoEmpty": "Mostrando del 0 al 0 de 0 registros",
-             "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
-             "sInfoPostFix": "",
-             "sSearch": "Buscar: ",
-             "sUrl": "",
-             "sInfoThousands": ".",
-             "sLoadingRecords": "Cargando...",
-             "oAria": {
-                 "sSortAscending": ": Activar para ordenar la columna de manera ascendente",
-                 "sSortDescending": ": Activar para ordenar la columna de manera descendente"
-             }
-         }
-     } );
-     } );
-</script>-->
+                    </table>
+                </div>
+            </div>
+            </div>
+        </section>
+    </div>
+    <!-- ms-paper-content -->
+</div>
