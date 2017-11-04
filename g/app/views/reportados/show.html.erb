@@ -1,44 +1,51 @@
-<p id="notice"><%= notice %></p>
+<div class="col-md-9 ms-paper-content-container">
+    <div class="ms-paper-content">
+        <h1>
+            Reportados
+           <!--  <small class="pull-right">
+            <%= link_to 'Nuevo Modelo', new_marca_path, class: 'btn-sm btn btn-raised btn-primary' %>
+            </small> -->
+        </h1>
 
-<p>
-  <strong>Marca:</strong>
-  <%= @reportado.marca %>
-</p>
+        <% if notice %>
+            <div class="alert alert-success alert-dismissible" role="alert">
+                <p><%= notice %></p>
+            </div>
+        <%end%>
+        <section class="ms-component-section">
+            <h2 class="section-title" id="tables-example">Detalles</h2>
+            <!-- <p>For basic styling&mdash;light padding and only horizontal dividers&mdash;add the base class <code>.table</code> to any <code>&lt;table&gt;</code>. It may seem super redundant, but given the widespread use of tables for other plugins
+                like calendars and date pickers, we've opted to isolate our custom table styles.</p> -->
+             <div class="col-md-12">
+                    <h3 class="page-header">Reporta  tu Celular con <b>4GCelulares</b></h3>
+                     <p>Detalle de pedido | Desbloqueo </p>
+                    <dl class="dl-horizontal">
+                      <dt>Marca:</dt>
+                      <dd><%= @reportado.marca %></dd>
+                   
+                      <dt>Modelo:</dt>
+                      <dd><%= @reportado.modelo %></dd>
 
-<p>
-  <strong>Modelo:</strong>
-  <%= @reportado.modelo %>
-</p>
+                      <dt>IMEI</dt>
+                      <dd><%= @reportado.imei %></dd>
 
-<p>
-  <strong>Imei:</strong>
-  <%= @reportado.imei %>
-</p>
+                      <dt>Tipo:</dt>
+                      <dd><%= @reportado.tipo %></dd>
 
-<p>
-  <strong>Tipo:</strong>
-  <%= @reportado.tipo %>
-</p>
+                      <dt>Operador:</dt>
+                      <dd><%= @reportado.operador %></dd>
 
-<p>
-  <strong>Operador:</strong>
-  <%= @reportado.operador %>
-</p>
+                      <dt>Estador:</dt>
+                      <dd><%= @reportado.estadoR %></dd>
 
-<p>
-  <strong>Estador:</strong>
-  <%= @reportado.estadoR %>
-</p>
-
-<p>
-  <strong>Estadop:</strong>
-  <%= @reportado.estadoP %>
-</p>
-
-<p>
-  <strong>Ciudad:</strong>
-  <%= @reportado.ciudad %>
-</p>
+                      <dt>Estadop:</dt>
+                      <dd><%= @reportado.estadoP %></dd>
+                      
+                      <dt>Ciudad:</dt>
+                      <dd><%= @reportado.ciudad %></dd>
+                    </dl>
+                  </div>
+        </section>
 
 <%= link_to 'Edit', edit_reportado_path(@reportado) %> |
 <%= link_to 'Back', reportados_path %>

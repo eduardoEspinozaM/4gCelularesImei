@@ -1,6 +1,6 @@
 class ReportadosController < ApplicationController
   before_action :set_reportado, only: [:show, :edit, :update, :destroy]
-
+layout 'admin'
   # GET /reportados
   # GET /reportados.json
   def index
