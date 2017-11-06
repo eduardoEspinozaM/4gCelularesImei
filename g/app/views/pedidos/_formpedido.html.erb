@@ -1,43 +1,56 @@
+<div class="wrap ms-hero-img-beach ms-hero-bg-primary ms-bg-fixed">
+    <div class="container index-1">
+        <div class="text-center color-white mb-4">
+            <h1>Desbloquea tu Celular con <b>4GCelulares</b></h1>
+            <p class="lead">Solicitar el código de desbloqueo para tu <%= @telefono.modelo.marca.nombre %> <%= @telefono.modelo.nombre %>
+            </p>
+        </div>
+        <div class="row color-dark">
+            <div class="col-lg-12 col-md-12 col-xs-12 mix smartphone samsung" data-price="569.99" data-date="20151201">
+                <div class="card wow zoomInUp">
+                    <div class="card-block text-center">
 
-<div class="intro intro4 overlay gradient4">
-        <div class="container">
-            <div class="row center-flex">
-                <div class="col-md-6">
-
-                    <h2>Desbloquea tu Celular con <b>4GCelulares</b> </h2>
-                    <p>Solicitar el código de desbloqueo para tu <%= @telefono.modelo.marca.nombre %> <%= @telefono.modelo.nombre %></p>
-                    
-                    <a href="#" class="btn btn-primary btn-lg">Get Started <i class="cu cu-arrow-right2"></i></a>
-                </div>
-
-                <div class="col-md-5 col-md-push-1">
-                    <%= form_with(model: @pedido, url: '/pedidos/create', local: true, method: :post, class: 'intro-form') do |form| %>
-                        <h4>Elige el operador actual del teléfono</h4>
+                        <%= form_with(model: @pedido, url: '/pedidos/create', local: true, method: :post, class: 'intro-form') do |form| %>
+                        <h4 class="text-normal text-center">Elige el operador actual del teléfono</h4>
                         
                         <% operadora_array = Operadora::all.map { |operadora| ["Operadora: #{operadora.nombre} | Costo: #{operadora.costo}", operadora.id ] }  %>
-                        <%= form.select(:operadora_id, options_for_select(operadora_array), {prompt: true})  %>
+                        <div class="col-lg-12">
+                            <%= form.select(:operadora_id, options_for_select(operadora_array), {prompt: true}, {class: 'form-control'})  %>
+                        </div>
                         <br>    
 
-                        <h4>Datos del Teléfono y Contacto</h4>
+                        <h4 class="text-normal text-center">Datos del Teléfono y Contacto</h4>
+                        <div class="col-lg-12">
                         <%= form.number_field :telefono_id, id: :pedido_telefono_id, placeholder: 'Telefono', class: 'hidden' %>
+                        </div>
 
-                        <%= form.number_field :imei, id: :pedido_imei, placeholder: 'IMEI' %>
+                        <div class="col-lg-4">
+                            <%= form.number_field :imei, id: :pedido_imei, placeholder: 'IMEI',class: 'form-control' %>
+                        </div>
 
-                        <%= form.text_field :email, id: :pedido_email, placeholder: 'Email' %>
+                        <div class="col-lg-4">
+                            <%= form.text_field :email, id: :pedido_email, placeholder: 'Email',class: 'form-control' %>
+                        </div>
 
-                        <%= form.text_field :nro_telefono, id: :pedido_nro_telefono, placeholder: 'Numero de contacto' %>
+                        <div class="col-lg-4">
+                             <%= form.text_field :nro_telefono, id: :pedido_nro_telefono, placeholder: 'Numero de contacto',class: 'form-control' %>
+                        </div>
 
-                        <%= form.collection_select(:formapago_id, FormaPago::all, :id, :nombre, {prompt: true}, {class: '' ,placeholder: 'Seleccione una forma de pago'}) %>
+                        <div class="col-lg-12">
+                            <%= form.collection_select(:formapago_id, FormaPago::all, :id, :nombre, {prompt: true}, {class: 'form-control' ,placeholder: 'Seleccione una forma de pago'}) %>
+                        </div>
 
-                        <%= form.submit 'Solicitar desbloqueo', class: 'btn btn-primary btn-lg btn-block text-center' %>
-                        <span>Rellena los datos del pedido y recibirás un correo con el código de desbloqueo y unas sencillas instrucciones detalladas para desbloquear tu <%= @telefono.modelo.marca.nombre %> <%= @telefono.modelo.nombre %> en tiempo récord.   </span>
+                        <br>
+                        <div class="col-lg-12">
+                            <%= form.submit 'Solicitar desbloqueo', class: 'btn btn-primary btn-sm btn-block btn-raised mt-2 no-mb' %>
+                        </div>
+
+                        <span class="text-normal text-center">Rellena los datos del pedido y recibirás un correo con el código de desbloqueo y unas sencillas instrucciones detalladas para desbloquear tu <%= @telefono.modelo.marca.nombre %> <%= @telefono.modelo.nombre %> en tiempo récord.   </span>
                     <% end %>
-                    <div id="response"></div>                   
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
+    <!-- conrainer -->
+</div>

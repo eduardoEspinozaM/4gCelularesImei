@@ -1,5 +1,25 @@
-<h1>New Telefono</h1>
 
-<%= render 'form', telefono: @telefono %>
 
-<%= link_to 'Back', telefonos_path %>
+<div class="col-md-9 ms-paper-content-container">
+    <div class="ms-paper-content">
+        <h1>Marcas <small class="text-muted">Crear nuevo</small></h1>
+        <% if notice %>
+            <div class="alert alert-success alert-dismissible" role="alert">
+                <p><%= notice %></p>
+            </div>
+        <%end%>
+
+        <section class="ms-component-section">
+            <div class="bs-example">
+            	<%= render 'form', telefono: @telefono %>
+
+            	  
+            	<%= link_to 'Volver', telefonos_path, class: 'btn btn-default btn-raised' %>
+            </div>
+            <!-- panel-code -->
+        </section>
+    </div>
+    <!-- ms-paper-content -->
+</div>
+
+

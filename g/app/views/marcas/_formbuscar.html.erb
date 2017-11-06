@@ -1,40 +1,33 @@
-
-<div class="intro intro4 overlay gradient4">
-        <div class="container">
-            <div class="row center-flex">
-                <div class="col-md-6">
-                    <% if marca.errors.any? %>
-                        <div id="error_explanation">
-                            <h2><%= pluralize(marca.errors.count, "error") %> prohibited this marca from being saved:</h2>
-                            <ul>
-                                <% marca.errors.full_messages.each do |message| %>
-                                    <li><%= message %></li>
-                                <% end %>
-                            </ul>
-                        </div>
-                    <% end %>
-
-                    <h2>Desbloquea tu Celular con <b>4GCelulares</b> </h2>
-                    <p>Selecciona la marca del celular que quieres liberar</p>
-                    
-                    <a href="#" class="btn btn-primary btn-lg">Get Started <i class="cu cu-arrow-right2"></i></a>
-                </div>
-
-                <div class="col-md-5 col-md-push-1">
-                    <%= form_with(url: '/marcas/busqueda', local: true, method: :get, class: 'intro-form') do |form| %>
-                    
-                        <h4>Selecciona la marca del celular que quieres liberar</h4>
-
-                        <%= form.collection_select(:marca_id, Marca::all, :id, :nombre, {prompt: true}, {class: '' ,placeholder: 'Busca aquí la marca del celular'}) %>
-
-                        <%= form.submit 'Seleccionar', class: 'btn btn-primary btn-lg btn-block text-center' %>
-                    <% end %>
-                    <div id="response"></div>                   
+<div class="wrap ms-hero-img-beach ms-hero-bg-primary ms-bg-fixed">
+    <div class="container index-1">
+        <% if marca.errors.any? %>
+        <div class="text-center color-white mw-800 center-block mb-4">
+            <h2><%= pluralize(marca.errors.count, "error") %> prohibited this marca from being saved:</h2>
+            <ul>
+                <% marca.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+                <% end %>
+            </ul>
+        </div>
+        <% end %>
+        <div class="text-center color-white mb-4">
+            <h1>Desbloquea tu Celular con <b>4GCelulares</b></h1>
+            <p class="lead">Selecciona la marca del celular que quieres liberar.
+            </p>
+        </div>
+        <div class="row color-dark">
+            <div class="col-lg-12 col-md-12 col-xs-12 mix smartphone samsung" data-price="569.99" data-date="20151201">
+                <div class="card wow zoomInUp">
+                    <div class="card-block text-center">
+                        <%= form_with(url: '/marcas/busqueda', local: true, method: :get, class: 'intro-form') do |form| %>
+                        <h4 class="text-normal text-center">Selecciona la marca del celular que quieres liberar</h4>
+                        <%= form.collection_select(:marca_id, Marca::all, :id, :nombre, {prompt: true}, {class: 'form-control' ,placeholder: 'Busca aquí la marca del celular'}) %>
+                        <%= form.submit 'Seleccionar', class: 'btn btn-primary btn-sm btn-block btn-raised mt-2 no-mb' %>
+                        <% end %> 
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
+    <!-- conrainer -->
+</div>

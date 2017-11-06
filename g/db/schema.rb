@@ -10,7 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170927043707) do
+ActiveRecord::Schema.define(version: 20171030120541) do
+
+  create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_admins_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+  end
+
+  create_table "chequears", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string "imei"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "forma_pagos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "nombre"
@@ -48,7 +71,7 @@ ActiveRecord::Schema.define(version: 20170927043707) do
   create_table "pedidos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.integer "operadora_id"
     t.integer "telefono_id"
-    t.integer "imei"
+    t.bigint "imei"
     t.string "email"
     t.string "nro_telefono"
     t.decimal "total", precision: 10
@@ -56,6 +79,32 @@ ActiveRecord::Schema.define(version: 20170927043707) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "formapago_id"
+  end
+
+  create_table "reportados", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string "marca"
+    t.string "modelo"
+    t.bigint "imei"
+    t.string "tipo"
+    t.string "operador"
+    t.boolean "estadoR"
+    t.boolean "estadoP"
+    t.string "ciudad"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "reportes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string "marca"
+    t.string "modelo"
+    t.bigint "imei"
+    t.string "tipo"
+    t.string "operador"
+    t.string "estadoR"
+    t.boolean "estadoP"
+    t.string "ciudad", limit: 1
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "telefonos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|

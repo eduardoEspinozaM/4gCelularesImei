@@ -1,6 +1,6 @@
 class ModelosController < ApplicationController
   before_action :set_modelo, only: [:show, :edit, :update, :destroy]
-  
+  layout 'admin'
   # GET /modelos
   # GET /modelos.json
   def index

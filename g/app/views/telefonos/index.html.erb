@@ -1,29 +1,90 @@
-<p id="notice"><%= notice %></p>
+<div class="col-md-9 ms-paper-content-container">
+    <div class="ms-paper-content">
+        <h1>
+            Telefono
+            <small class="pull-right">
+            <%= link_to 'Nuevo Telefono', new_telefono_path, class: 'btn-sm btn btn-raised btn-primary' %>
+            </small>
+        </h1>
 
-<h1>Telefonos</h1>
+        <% if notice %>
+            <div class="alert alert-success alert-dismissible" role="alert">
+                <p><%= notice %></p>
+            </div>
+        <%end%>
+        <section class="ms-component-section">
+            <h2 class="section-title" id="tables-example">Listado</h2>
+            <!-- <p>For basic styling&mdash;light padding and only horizontal dividers&mdash;add the base class <code>.table</code> to any <code>&lt;table&gt;</code>. It may seem super redundant, but given the widespread use of tables for other plugins
+                like calendars and date pickers, we've opted to isolate our custom table styles.</p> -->
+            <div class="bs-example">
+                <table class="table" id="datatable">
+                    <thead>
+                        <tr>
+                            <td>Modelo</td>
+                            <td>Tipo</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @telefonos.each do |telefono| %>
+                        <tr>
+                             <td><%= telefono.modelo.nombre %></td>
+                              <td><%= telefono.tipo.nombre %></td>
+                            <td>
+                                <%= link_to 'ver', telefono, class: 'btn-sm btn btn-raised btn-info' %>
+                                <%= link_to 'editar', edit_telefono_path(telefono), class: 'btn-sm btn btn-raised btn-warning ' %>
+                                <%= link_to 'Eliminar', telefono, data: { confirm: 'Are you sure?' }, class: 'btn-sm btn btn-raised btn-danger', method: :delete %>
+                            </td>
+                        </tr>
+                        <% end %>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+    <!-- ms-paper-content -->
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Modelo</th>
-      <th>Tipo</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @telefonos.each do |telefono| %>
-      <tr>
-        <td><%= telefono.modelo_id %></td>
-        <td><%= telefono.tipo_id %></td>
-        <td><%= link_to 'Show', telefono %></td>
-        <td><%= link_to 'Edit', edit_telefono_path(telefono) %></td>
-        <td><%= link_to 'Destroy', telefono, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    
 
-<br>
-
-<%= link_to 'New Telefono', new_telefono_path %>
+<!-- 
+              
+<script>
+   $(document).ready(function() {
+     $('#link_to').DataTable( {
+         responsive: true,
+         "bProcessing": true,
+         //"sPaginationType": "full_numbers",
+         "paging": true,
+         "iDisplayLength": 10,
+         "bPaginate": true,
+         "bSort": true,
+         "oLanguage": {
+             "oPaginate": {
+                 "sPrevious": "←",
+                 "sNext": "→",
+                 "sLast": "»",
+                 "sFirst": "«"
+             },
+             "sProcessing": "Procesando...",
+             "sLengthMenu": "Mostrar _MENU_ registros",
+             "sZeroRecords": "No se encontraron resultados",
+             "sEmptyTable": "Ningún dato disponible en esta tabla",
+             "sInfo": "Mostrando de _START_ al _END_ de _TOTAL_ registros",
+             //"sInfo": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+             "sInfoEmpty": "Mostrando del 0 al 0 de 0 registros",
+             "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
+             "sInfoPostFix": "",
+             "sSearch": "Buscar: ",
+             "sUrl": "",
+             "sInfoThousands": ".",
+             "sLoadingRecords": "Cargando...",
+             "oAria": {
+                 "sSortAscending": ": Activar para ordenar la columna de manera ascendente",
+                 "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+             }
+         }
+     } );
+     } );
+</script> -->

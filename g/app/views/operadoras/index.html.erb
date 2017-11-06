@@ -1,38 +1,47 @@
-
 <div class="col-md-9 ms-paper-content-container">
     <div class="ms-paper-content">
-        <h1>Marcas</h1>
-        <p id="notice"><%= notice %></p>
+        <h1>
+            Operadoras
+            <small class="pull-right">
+            <%= link_to 'Nueva Operadora', new_operadora_path, class: 'btn-sm btn btn-raised btn-primary' %>
+            </small>
+        </h1>
+
+        <% if notice %>
+            <div class="alert alert-success alert-dismissible" role="alert">
+                <p><%= notice %></p>
+            </div>
+        <%end%>
         <section class="ms-component-section">
+            <h2 class="section-title" id="tables-example">Listado</h2>
+            <!-- <p>For basic styling&mdash;light padding and only horizontal dividers&mdash;add the base class <code>.table</code> to any <code>&lt;table&gt;</code>. It may seem super redundant, but given the widespread use of tables for other plugins
+                like calendars and date pickers, we've opted to isolate our custom table styles.</p> -->
             <div class="bs-example">
                 <table class="table">
                     <thead>
                         <tr>
-      <th>Pais</th>
-      <th>Nombre</th>
-      <th>Costo</th>
-                            <th colspan="3"></th>
+                            <td>Operadora</td>
+                            <td>Precio</td>
+                            <td></td>
                         </tr>
                     </thead>
                     <tbody>
-                        
-   
-    <% @operadoras.each do |operadora| %>
-                        <tr>   <td><%= operadora.pais_id %></td>
-        <td><%= operadora.nombre %></td>
-        <td><%= operadora.costo %></td>
-        <td><%= link_to 'Show', operadora %></td>
-        <td><%= link_to 'Edit', edit_operadora_path(operadora) %></td>
-        <td><%= link_to 'Destroy', operadora, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr> </tr>
+                       <% @operadoras.each do |operadora| %>
+                        <tr>
+                            <td><%= operadora.nombre %></td>
+                            <td><%= operadora.costo %></td>
+                            <td>
+                              <%= link_to 'Show', operadora %>
+                              <%= link_to 'Edit', edit_operadora_path(operadora) %>
+                              <%= link_to 'Destroy', operadora, method: :delete, data: { confirm: 'Are you sure?' } %>
+                            </td>
+                        </tr>
                         <% end %>
                     </tbody>
                 </table>
             </div>
-            <!-- panel-code -->
         </section>
     </div>
     <!-- ms-paper-content -->
 </div>
 
-<%= link_to 'New Operadora', new_operadora_path %>
